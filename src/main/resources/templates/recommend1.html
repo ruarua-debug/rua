@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="panel panel-success">
+    <div class="panel-body">
+
+    </div>
+    <form class="form-inline col-lg-8" method="post" action="/data/recommend1">
+        <div class="form-group">
+            <label for="exampleInputName2">城市</label>
+            <select style="width: 200px;" name="City" class="form-control">
+                <option value="0">---请选择城市---</option>
+                <option th:each="ChartInfo:${chartInfo}" th:value="${ChartInfo.CityID}" th:text="${ChartInfo.City}"
+                        th:selected="${ChartInfo.CityID==CityID}"
+                >北京</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputName2">职位</label>
+            <select style="width: 200px;" name="Position" class="form-control">
+                <option value="0">---请选择职位---</option>
+                <option th:each="ChartInfo:${chartInfo}" th:value="${ChartInfo.Position}" th:text="${ChartInfo.Position}"
+                        th:selected="${ChartInfo.CityID==CityID}"
+                >数据挖掘</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-info">查询</button>
+        <br>
+    </form>
+    <br/>  <br/>
+    <table class="table table-hover">
+        <tr>
+            <th>编号</th>
+            <th>城市</th>
+            <th>职位</th>
+
+        </tr>
+        <tr th:each="ChartInfo,userStat:${chart.list}">
+            <td th:text="${userStat.index+1}"> abc </td>
+            <td>
+                <div th:switch="${ChartInfo.City}">
+                    <p th:case="上海">上海</p>
+                    <p th:case="北京">北京</p>
+                    <p th:case="南京">南京</p>
+                    <p th:case="广州">广州</p>
+                    <p th:case="成都">成都</p>
+                    <p th:case="杭州">杭州</p>
+                    <p th:case="武汉">武汉</p>
+                    <p th:case="深圳">深圳</p>
+                </div>
+            </td>
+            <td>
+                <div th:switch="${ChartInfo.Position}">
+                    <p th:case="数据挖掘">数据挖掘</p>
+                    <p th:case="人事经理">人事经理</p>
+                    <p th:case="C++游戏开发工程师">游戏开发工程师</p>
+                    <p th:case="web前端开发">web前端开发</p>
+                </div>
+            </td>
+    </table>
+</div>
+</body>
+</html>

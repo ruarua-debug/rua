@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+    <!-- animation css files -->
+    <link rel="stylesheet" href="/boot/css/animation-aos.css">
+    <link href='/boot/css/aos.css' rel='stylesheet prefetch' type="text/css" media="all" />
+    <!-- //animation css files -->
+
+    <!-- css files -->
+    <link href="/boot/css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+    <link href="/boot/css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
+    <link href="/boot/css/fontawesome-all.css" rel="stylesheet"><!-- fontawesome css -->
+    <!-- //css files -->
+    <!-- google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <!-- //google fonts -->
+    <!--职称导航条  bootes-->
+    <link rel="icon" href="/boot2/img/favicon.png" />
+    <!-- bootstrap.min.css -->
+
+    <!-- font-awesome.min.css -->
+    <link rel="stylesheet" href="/boot2/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/boot2/css/meanmenu.min.css">
+    <!-- shortcode/shortcodes.css -->
+    <link rel="stylesheet" href="/boot2/css/shortcode/shortcodes.css">
+    <!-- nivo-slider.css -->
+    <link rel="stylesheet" href="/boot2/css/nivo-slider.css">
+    <!-- style.css -->
+
+    <!-- responsive.css -->
+    <style>
+        li{
+            list-style: none;
+        }
+    </style>
+
+    <!--//职称导航条-->
+    <!--城市图片-->
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+
+    <link href="/boot3/css/fontawesome-all.css" rel="stylesheet">
+    <link href="/boot3/css/swiper.css" rel="stylesheet">
+    <link href="/boot3/css/magnific-popup.css" rel="stylesheet">
+    <link href="/boot3/css/styles.css" rel="stylesheet">
+    <link rel="icon" href="/boot3/images/favicon.png">
+    <!--//城市图片-->
+    <!--下拉菜单-->
+    <link href="bootstrap8/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <!--//下拉菜单-->
+</head>
+<body>
+
+<!-- header -->
+<header class="index-banner" >
+    <!-- nav -->
+    <nav class="main-header  navbar navbar-default" >
+        <div id="brand" data-aos="zoom-in-up">
+            <div id="logo">
+                <a href="index.html">
+                    <i class="fab fa-blackberry"></i>
+                </a>
+            </div>
+            <div id="word-mark">
+                <h1>
+                    <a href="index.html">DATABOX</a>
+                </h1>
+            </div>
+        </div>
+        <div id="menu">
+            <div id="menu-toggle">
+                <div id="menu-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <ul class="text-center text-capitalize nav-agile" data-aos="zoom-in-up" margin-right:40px>
+                <li>
+                    <a href="/data/main" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <!--<li>
+                    <a href="#choose" class="scroll">职位</a>
+                </li>-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">职位 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/data/position1" style="color: #4e4f50">数据挖掘</a></li>
+                        <li><a href="/data/position2"  style="color:#4e4f50">人事经理</a></li>
+                        <li><a href="/data/position3" style="color:#4e4f50">C++游戏开发 </a></li>
+                        <li><a href="/data/position4"  style="color:#4e4f50">web前端开发师 </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <!--                <li>-->
+                <!--                    <a href="#overview" class="scroll">城市</a>-->
+                <!--                </li>-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">城市 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a th:href="@{'getcity/1'}" style="color:#4e4f50">北京</a></li>
+                        <li><a th:href="@{'getcity/2'}"  style="color:#4e4f50">上海</a></li>
+                        <li><a th:href="@{'getcity/3'}"  style="color:#4e4f50">广州</a></li>
+                        <li><a th:href="@{'getcity/4'}"  style="color:#4e4f50">深圳</a></li>
+                        <li><a th:href="@{'getcity/5'}"  style="color:#4e4f50">杭州</a></li>
+                        <li><a th:href="@{'getcity/6'}"  style="color:#4e4f50">成都</a></li>
+                        <li><a th:href="@{'getcity/7'}"  style="color:#4e4f50">武汉</a></li>
+                        <li><a th:href="@{'getcity/8'}"  style="color:#4e4f50">南京</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">专业 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a th:href="@{'getmajor/1'}"  style="color:#4e4f50">工商管理</a></li>
+                        <li><a th:href="@{'getmajor/2'}"  style="color:#4e4f50">人力资源管理</a></li>
+                        <li><a th:href="@{'getmajor/3'}"  style="color:#4e4f50">财务管理</a></li>
+                        <li><a th:href="@{'getmajor/4'}" style="color:#4e4f50">信息管理</a></li>
+                        <li><a th:href="@{'getmajor/5'}"  style="color:#4e4f50">软件工程</a></li>
+                        <li><a th:href="@{'getmajor/6'}"  style="color:#4e4f50">计算机科学</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <li>
+                    <a href="/data/chat" class="scroll">讨论</a>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <!--                <li>-->
+                <!--                    <img src="/BootStrap1/images/1.png" class="" />-->
+                <!--                </li>-->
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <a href="/user/login" class="btn btn-primary">登录</a>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <li>
+                    <a href="/user/register" class="btn btn-primary">注册</a>
+                </li>
+
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!-- //nav -->
+    <!-- banner -->
+    <div class="banner layer" id="home">
+        <div class="container">
+            <div class="row banner-text">
+                <div class="slider-info col-lg-8">
+                    <br>
+                    <br>
+                    <br>
+
+                    <h3 class="txt-w3_agile" data-aos="fade-down">社 会 职 位 变 化 分 析 </h3>
+                    <br>
+                    <br>
+                </div>
+                <div class="col-lg-4 col-md-8 mt-lg-0 mt-5 banner-form" data-aos="fade-left">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //banner -->
+</header>
+<!-- //header -->
+
+<!-- banner bottom -->
+<section class="banner-bottom py-5">
+    <div class="container py-md-3">
+        <!-- why choose us -->
+        <section class="choose py-5" id="choose">
+            <div class="container py-md-3">
+                <h4 class="heading mb-5 text-center" data-aos="zoom-in">Some kinds of Position</h4>
+                <div class="feature-grids row">
+                    <div class="col-lg-12 col-md-12" data-aos="fade-right">
+
+                        <!-- 职位导航条 -->
+                        <!--[if lt IE 8]>
+                        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+                        <![endif]-->
+                        <!-- mainmenu-area-start -->
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3">
+
+                                    <div class="product_vmegamenu">
+                                        <ul>
+                                            <li>&nbsp;</li>
+                                            <li>&nbsp;</li>
+                                            <li>
+                                                <a href="#"  class="hover-icon"><img src="/boot2/img/menu-l/6.png" alt="" />计算机软件/硬件</a>
+                                                <div class="vmegamenu">
+									<span>
+										<a href="#" class="vgema-title">1</a>
+										<a href="/data/position1">数据挖掘</a>
+										<a href="#">算法工程师</a>
+										</span>
+                                                    <span>
+											<a href="#" class="vgema-title">2 </a>
+											<a href="#">ERP实施顾问</a>
+											<a href="#">架构设计师</a>
+
+										</span>
+                                                    <span>
+										<a href="#" class="vgema-title">3</a>
+										<a href="#"> 数据库工程师</a>
+									</span>
+                                                </div>
+                                            </li>
+                                            <li>&nbsp;</li>
+                                            <li>
+                                                <a href="#" class="hover-icon"><img src="/boot2/img/menu-l/12.png" alt="" />管理类岗位</a>
+                                                <div class="vmegamenu">
+									<span>
+										<a href="#" class="vgema-title">1</a>
+                                        	<a href="/data/position2">人事经理</a>
+										<a href="#">首席执行官</a>
+
+
+									</span>
+                                                    <span>
+										<a href="#" class="vgema-title">2</a>
+										<a href="#">项目经理 </a>
+										<a href="#">财务总监</a>
+
+									</span>
+                                                    <span>
+										<a href="#" class="vgema-title">3</a>
+										<a href="#">行政总监</a>
+										<a href="#">企业秘书</a>
+
+									</span>
+                                                    <span>
+									</span>
+                                                </div>
+                                            </li>
+                                            <li>&nbsp;</li>
+                                            <li>
+                                                <a href="#" class="hover-icon"><img src="/boot2/img/menu-l/7.png" alt="" />互联网/电子商务/网游</a>
+                                                <div class="vmegamenu">
+									<span>
+										<a href="#" class="vgema-title">1</a>
+                                        <a href="/data/position4">web前端开发师</a>
+										<a href="#">UI设计师</a>
+
+									</span>
+                                                    <span>
+										<a href="#" class="vgema-title">2</a>
+                                        <a href="#">网站架构设计师</a>
+										<a href="#">大数据分析师</a>
+									</span>
+                                                    <span>
+										<a href="#" class="vgema-title">3</a>
+
+
+									</span>
+                                                </div>
+                                            </li>
+                                            <li>&nbsp;</li>
+                                            <li>
+                                                <a href="#" class="hover-icon"><img src="/boot2/img/menu-l/7.png" alt="" /> 游戏开发</a>
+                                                <div class="vmegamenu vmegamenu2">
+									<span>
+										<a href="/data/position3" class="vgema-title">1</a>
+										<a href="/data/position3">C++游戏开发工程师</a>
+										<a href="#">小游戏开发</a>
+									</span>
+                                                    <span>
+										<a href="#" class="vgema-title">2</a>
+										<a href="#">Flash游戏开发</a>
+
+
+									</span>
+                                                </div>
+                                            </li>
+                                            <li>&nbsp;</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- slider-area-start -->
+                        <div class="slider-area">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 hidden-sm hidden-xs"></div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="main-slider">
+                                            <div>
+                                                <!-- Slider Image -->
+                                                <div >
+                                                    <img src="/boot2/img/slider/1.jpg" alt="" title="#htmlcaption1">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg- col-md-3 col-sm-12 col-xs-12">
+                                        <div class="slider-sidebar">
+                                            <div class="slider-single-img mb-20">
+                                                <a href="#">
+                                                    <img class="img_a" src="/boot2/img/menu-l/1-1.jpg" alt="" />
+                                                    <img class="img_b" src="/boot2/img/menu-l/1-1.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="slider-single-img none-sm">
+                                                <a href="#">
+                                                    <img class="img_a" src="/boot2/img/menu-l/1-2.jpg" alt="" />
+                                                    <img class="img_b" src="/boot2/img/menu-l/1-2.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- //职位导航条 -->
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //why choose us -->
+
+    </div>
+</section>
+<!-- //banner bottom -->
+
+<!-- //why choose us -->
+
+<!--&lt;!&ndash; quote &ndash;&gt;-->
+<!--<section class="quote bg-light py-5">-->
+<!--    <div class="container py-md-3" data-aos="fade-up">-->
+
+
+<!--        <div class="clearfix"></div>-->
+<!--    </div>-->
+<!--</section>-->
+<!--&lt;!&ndash; //quote &ndash;&gt;-->
+
+<!--&lt;!&ndash; process &ndash;&gt;-->
+<!--<section class="process py-5" id="overview">-->
+<!--    <div class="container py-md-5">-->
+<!--        <div class="row process-grids">-->
+<!--            <div class="col-lg-6" data-aos="fade-right">-->
+
+<!--            </div>-->
+
+<!--            <div class="col-lg-6 mt-5" data-aos="fade-left">-->
+
+<!--            </div>-->
+<!--        </div>-->
+<!--</section>-->
+<!--&lt;!&ndash; //process &ndash;&gt;-->
+
+<!--/pricing -->
+<section class="pricing bg-light py-5" id="pricing">
+    <!-- //城市图片 -->
+    <!-- Projects -->
+    <div id="projects" class="filter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">PROJECTS</div>
+                    <h2>Projects That We're Proud Of</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <!--按钮 -->
+                    <div class="button-group filters-button-group">
+                        <a class="button is-checked" data-filter="*"><span>SHOW ALL</span></a>
+                        <a class="button" data-filter=".design"><span>DESIGN</span></a>
+                        <a class="button" data-filter=".development"><span>DEVELOPMENT</span></a>
+                        <a class="button" data-filter=".marketing"><span>MARKETING</span></a>
+                        <a class="button" data-filter=".seo"><span>SEO</span></a>
+                    </div> <!-- end of button group -->
+                    <div class="grid">
+                        <div class="element-item development" style="width: 270px;height: 180px;">
+                            <a class="popup-with-move-anim" th:href="@{'getcity/1'}"><div class="element-item-overlay"><span>北京</span></div><img src="/boot3/images/project-1.jpg" alt="北京"></a>
+                        </div>
+                        <div class="element-item development" style="width: 270px;height: 180px;">
+                            <a class="popup-with-move-anim" th:href="@{'getcity/2'}"><div class="element-item-overlay"><span>上海 </span></div><img src="/boot3/images/project-2.jpg" alt="上海"></a>
+                        </div>
+                        <div class="element-item design development marketing" style="width: 280px;height: 180px;">
+                            <a class="popup-with-move-anim" th:href="@{'getcity/3'}"><div class="element-item-overlay"><span> 广州</span></div><img src="/boot3/images/project-3.jpg" alt="广州"></a>
+                        </div>
+                        <div class="element-item design development marketing" style="width: 270px;height: 180px;">
+                            <a class="popup-with-move-anim" th:href="@{'getcity/4'}"><div class="element-item-overlay"><span>深圳</span></div><img src="/boot3/images/project-4.jpg" alt="深圳"></a>
+                        </div>
+                        <div class="element-item design development marketing seo" style="width: 270px;height: 180px;">
+                            <a class="popup-with-move-anim" th:href="@{'getcity/5'}"><div class="element-item-overlay"><span>杭州</span></div><img src="/boot3/images/project-5.jpg" alt="杭州"></a>
+                        </div>
+                        <div class="element-item design marketing seo" style="width: 270px;height: 180px;">
+                            <a class="popup-with-move-anim" th:href="@{'getcity/6'}"><div class="element-item-overlay"><span>成都</span></div><img src="/boot3/images/project-6.jpg" alt="武汉"></a>
+                        </div>
+                        <div class="element-item design marketing" style="width: 270px;height: 180px;">
+                            <a class="popup-with-move-anim" th:href="@{'getcity/7'}"><div class="element-item-overlay"><span>武汉</span></div><img src="/boot3/images/project-7.jpg" alt="南京"></a>
+                        </div>
+                        <div class="element-item design marketing" style="width: 270px;height: 180px;">
+                            <a class="popup-with-move-anim" th:href="@{'getcity/8'}"><div class="element-item-overlay"><span>南京</span></div><img src="/boot3/images/project-8.jpg" alt="成都"></a>
+                        </div>
+                    </div> <!-- end of grid -->
+                    <!-- //按钮 -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of filter -->
+    <!-- end of projects -->
+
+
+    <!-- Project Lightboxes -->
+    <!-- Lightbox1 -->
+    <div id="project-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="/boot3/images/project-1.jpg" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>北京</h3>
+                <hr class="line-heading">
+                <h6>Beijing</h6>
+                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
+                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
+                <div class="testimonial-container">
+                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
+                    <p class="testimonial-author">General Manager</p>
+                </div>
+                <a class="btn-solid-reg" href="#your-link">DETAILS</a>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+    <!-- Lightbox2 -->
+    <div id="project-2" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="/boot3/images/project-2.jpg" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>上海</h3>
+                <hr class="line-heading">
+                <h6>Shanghai</h6>
+                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
+                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
+                <div class="testimonial-container">
+                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
+                    <p class="testimonial-author">General Manager</p>
+                </div>
+                <a class="btn-solid-reg" href="#your-link">DETAILS</a>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+    <!-- Lightbox3 -->
+    <div id="project-3" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="/boot3/images/project-3.jpg" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>广州</h3>
+                <hr class="line-heading">
+                <h6>GuangZhou</h6>
+                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
+                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
+                <div class="testimonial-container">
+                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
+                    <p class="testimonial-author">General Manager</p>
+                </div>
+                <a class="btn-solid-reg" href="#your-link">DETAILS</a>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+    <!-- Lightbox 4-->
+    <div id="project-4" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="/boot3/images/project-4.jpg" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>深圳</h3>
+                <hr class="line-heading">
+                <h6>Shenzhen</h6>
+                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
+                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
+                <div class="testimonial-container">
+                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
+                    <p class="testimonial-author">General Manager</p>
+                </div>
+                <a class="btn-solid-reg" href="#your-link">DETAILS</a>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+    <div>&nbsp;</div>
+    <!-- Lightbox 5 -->
+    <div id="project-5" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="/boot3/images/project-5.jpg" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>杭州</h3>
+                <hr class="line-heading">
+                <h6>Hangzhou</h6>
+                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
+                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
+                <div class="testimonial-container">
+                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
+                    <p class="testimonial-author">General Manager</p>
+                </div>
+                <a class="btn-solid-reg" href="#your-link">DETAILS</a>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+    <!-- Lightbox 6 -->
+    <div id="project-6" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="/boot3/images/project-6.jpg" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>成都</h3>
+                <hr class="line-heading">
+                <h6>Wuhan</h6>
+                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
+                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
+                <div class="testimonial-container">
+                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
+                    <p class="testimonial-author">General Manager</p>
+                </div>
+                <a class="btn-solid-reg" href="#your-link">DETAILS</a>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+    <!-- Lightbox 7-->
+    <div id="project-7" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="/boot3/images/project-7.jpg" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>武汉</h3>
+                <hr class="line-heading">
+                <h6>Nanjing</h6>
+                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
+                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
+                <div class="testimonial-container">
+                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
+                    <p class="testimonial-author">General Manager</p>
+                </div>
+                <a class="btn-solid-reg" href="#your-link">DETAILS</a>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+    <!-- Lightbox  8-->
+    <div id="project-8" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-8">
+                <img class="img-fluid" src="/boot3/images/project-8.jpg" alt="alternative">
+            </div> <!-- end of col -->
+            <div class="col-lg-4">
+                <h3>南京</h3>
+                <hr class="line-heading">
+                <h6>Chengdu</h6>
+                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
+                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
+                <div class="testimonial-container">
+                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
+                    <p class="testimonial-author">General Manager</p>
+                </div>
+                <a class="btn-solid-reg" href="#your-link">DETAILS</a>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+    <!-- end of project lightboxes -->
+
+</section>
+<!-- //pricing -->
+
+<!-- faqs -->
+<section class="faq-w3l py-5" id="faq">
+    <div class="container py-lg-3">
+
+        <div class="row faq-info">
+            <div class=" col-md-6 faq-w3agile">
+
+            </div>
+            <div class=" col-md-6 faq-w3agile">
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //faqs -->
+
+<!-- testimonials -->
+
+<!-- //testimonials -->
+
+<!-- contact -->
+<!-- //contact -->
+
+<!--footer -->
+<footer>
+    <section class="footer footer_w3layouts_section_1its py-5" style="height:300 px;">
+        <div class="container py-md-3">
+            <div class="footer-grid_section text-center" data-aos="zoom-in" padding:5px; style="height: 40x;">
+                <ul class="social_section_1info">
+                    <li class="mb-2 facebook"><a href="#"><i class="fab mr-1 fa-facebook-f"></i>facebook</a></li>
+                    <li class="mb-2 twitter"><a href="#"><i class="fab mr-1 fa-twitter"></i>twitter</a></li>
+                    <li class="google"><a href="#"><i class="fab mr-1 fa-google-plus-g"></i>google</a></li>
+                    <li class="linkedin"><a href="#"><i class="fab mr-1 fa-linkedin-in"></i>linkedin</a></li>
+                </ul>
+            </div>
+
+            <div class="row footer-top mt-md-5 mt-4"style="height: 150px;">
+                <div class="col-lg-4 col-md-6 footer-grid_section_1its_w3" data-aos="fade-right">
+                    <div class="footer-title">
+                        <h3>关 于 我 们</h3>
+                    </div>
+                    <div class="footer-text">
+                        <p>产 品 介 绍 </p>
+                        <p>相 关 新 闻  <a href="mailto:info@example.com">info@example.com</a></p>
+                        <p>联 系 我 们 : +12 534894364</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-4 footer-grid_section_1its_w3" data-aos="fade-up">
+                    <div class="footer-title">
+                        <h3>友 情 链 接</h3>
+                    </div>
+                    <div class="row">
+                        <ul class="col-6 links">
+                            <li><a href="#choose" class="scroll"> </a></li>
+                            <li><a href="#https://www.zhipin.com/?sid=sem_pz_360pc_title" class="scroll">Boss 直 聘 </a></li>
+                            <li><a href="#https://zhaopin.baidu.com/quanzhi" class="scroll">百 度 百 聘</a></li>
+                            <li><a href="#https://wh.58.com/?utm_source=sem-360-pc&spm=14623020152.6642781136&utm_campaign=sell&utm_medium=cpcq" class="scroll">58 同 城 </a></li>
+                            <li><a href="#https://join.qq.com/" class="scroll">腾 讯 校 园 招 聘 </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mt-lg-0 mt-4 col-sm-12 footer-grid_section_1its_w3" data-aos="fade-left">
+                    <div class="footer-title">
+                        <h3>用户中心</h3>
+                    </div>
+                    <ul class="col-6 links">
+                        <li><a href="#">使 用 指 南 </a></li>
+                        <li><a href="#faq" class="scroll">用 户 协 议</a></li>
+                        <li><a href="#">企 业 咨 询</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row">
+            <img src="/erweima.jpg">
+        </div>
+
+    </section>
+
+</footer>
+<!-- //footer -->
+
+<!-- copyright -->
+<div class="cpy-right text-center py-3"style="height: 40px;">
+    <p class="">Copyright &copy; 2019.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+</div>
+<!-- //copyright -->
+
+<!-- Vertically centered Modal -->
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-capitalize text-center" id="exampleModalLongTitle"> <i class="fab fa-blackberry"></i> Landing</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save Changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Vertically centered Modal -->
+
+<!-- video Modal Popup -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Video Overview</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body video">
+                <iframe src=""></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save Changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //video Model Popup -->
+
+<!--/Login-->
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="login px-4 mx-auto mw-100">
+                    <h5 class="text-center mb-4">Login Now</h5>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label class="mb-2">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required="">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label class="mb-2">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="" required="">
+                        </div>
+                        <div class="form-check mb-2">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit mt-2">Sign In</button>
+                        <p class="text-center pb-4">
+                            <a href="#" data-toggle="modal2" data-target="#exampleModalCenter"> Don't have an account?</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--//Login-->
+
+<!-- js -->
+<script src="/boot/js/jquery-2.2.3.min.js"></script>
+<script src="/boot/js/bootstrap.js"></script>
+<!-- //js -->
+
+<!-- animation js -->
+<script src='/boot/js/aos.js'></script>
+<script>
+    AOS.init({
+        easing: 'ease-out-back',
+        duration: 1000
+    });
+
+</script>
+<!-- //animation js -->
+
+<!-- testimonials  Responsiveslides -->
+<script src="/boot/js/responsiveslides.min.js"></script>
+<script>
+    // You can also use"$(window).load(function() {"
+    $(function () {
+        // Slideshow 4
+        $("#slider3").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: false,
+            speed: 500,
+            namespace: "callbacks",
+            before: function () {
+                $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+                $('.events').append("<li>after event fired.</li>");
+            }
+        });
+
+    });
+</script>
+<!-- //testimonials  Responsiveslides -->
+
+<!-- sticky nav bar-->
+<script>
+    $(() => {
+
+        //On Scroll Functionality
+        $(window).scroll(() => {
+            var windowTop = $(window).scrollTop();
+    windowTop > 100 ? $('nav').addClass('navShadow') : $('nav').removeClass('navShadow');
+    windowTop > 100 ? $('ul.nav-agile').css('top', '50px') : $('ul.nav-agile').css('top', '160px');
+    });
+
+    //Click Logo To Scroll To Top
+    $('#logo').on('click', () => {
+        $('html,body').animate({
+        scrollTop: 0
+    }, 500);
+    });
+
+    /*
+     //Smooth Scrolling Using Navigation Menu
+     $('a[href*="#"]').on('click', function (e) {
+       $('html,body').animate({
+         scrollTop: $($(this).attr('href')).offset().top - 100
+       }, 500);
+       e.preventDefault();
+     });
+    */
+
+    //Toggle Menu
+    $('#menu-toggle').on('click', () => {
+        $('#menu-toggle').toggleClass('closeMenu');
+    $('ul').toggleClass('showMenu');
+
+    $('li').on('click', () => {
+        $('ul').removeClass('showMenu');
+    $('#menu-toggle').removeClass('closeMenu');
+    });
+    });
+
+    });
+</script>
+<!-- //sticky nav bar -->
+
+
+
+</body>
+</html>

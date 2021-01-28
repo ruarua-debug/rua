@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>chart1</title>
+    <script src="/mychart/js/jquery.min.js"></script>
+    <script src="/mychart/js/echarts.js"></script>
+
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="width: 600px;height:400px;"></div>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var chart1 = echarts.init(document.getElementById('main'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            text: 'ECharts 入门示例'
+        },
+        tooltip: {},
+        legend: {
+            data:['公司']
+        },
+        xAxis: {
+            data: ['阿里巴巴-高德','贝壳','太古代科技','微聚未来','智加科技','微软（中国）有限公司','字节跳动','旅悦公司']
+        },
+        yAxis: {},
+        series: [{
+            name: '工资',
+            type: 'bar',
+            data: [[${rank1}]]
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    chart1.setOption(option);
+</script>
+</body>
+</html>

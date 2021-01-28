@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Home</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+    <!-- animation css files -->
+    <link rel="stylesheet" href="Bootstrap1/css/animation-aos.css">
+    <link href='/Bootstrap1/css/aos.css' rel='stylesheet prefetch' type="text/css" media="all" />
+    <!-- //animation css files -->
+
+    <!-- css files -->
+    <link href="/Bootstrap1/css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+    <link href="/Bootstrap1/css/style1.css" rel='stylesheet' type='text/css' /><!-- custom css -->
+    <link href="/Bootstrap1/css/fontawesome-all.css" rel="stylesheet"><!-- fontawesome css -->
+    <!-- //css files -->
+
+    <!-- google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <!-- //google fonts -->
+
+    <link href="/Bootstrap2/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/Bootstrap2/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/Bootstrap2/css/main_responsive.css">
+
+</head>
+<body>
+
+<!-- header -->
+<header class="index-banner">
+    <!-- nav -->
+    <nav class="main-header navShadow">
+        <div id="brand" data-aos="zoom-in-up" class="aos-init aos-animate">
+
+            <div id="logo">
+                <a href="index.html">
+                    <i class="fab fa-blackberry"></i>
+                </a>
+            </div>
+            <div id="word-mark">
+                <h1>
+                    <a href="index.html">DATABOX</a>
+                </h1>
+            </div>
+        </div>
+        <div id="menu">
+            <div id="menu-toggle">
+                <div id="menu-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <ul class="text-center text-capitalize nav-agile" data-aos="zoom-in-up" >
+                <li>
+                    <a href="/data/main" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <!--<li>
+                    <a href="#choose" class="scroll">职位</a>
+                </li>-->
+
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">职位 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul>
+                            <li><a href="/data/position1" style="color:#4e4f50">数据挖掘</a></li>
+                            <li><a href="/data/position2" style="color:#4e4f50">人事经理</a></li>
+                            <li><a href="/data/position3" style="color:#4e4f50">C++游戏开发</a></li>
+                            <li><a href="/data/position4" style="color:#4e4f50">web前端开发</a></li>
+                        </ul>
+                    </section>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <!--下拉菜单-->
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> 城市 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul>
+                            <li><a th:href="@{'getcity/1'}"  style="color:#4e4f50">北京</a></li>
+                            <li><a th:href="@{'getcity/2'}"  style="color:#4e4f50">上海</a></li>
+                            <li><a th:href="@{'getcity/3'}"  style="color:#4e4f50">广州</a></li>
+                            <li><a th:href="@{'getcity/4'}"  style="color:#4e4f50">深圳</a></li>
+                            <li><a th:href="@{'getcity/5'}"  style="color:#4e4f50">杭州</a></li>
+                            <li><a th:href="@{'getcity/6'}"  style="color:#4e4f50">成都</a></li>
+                            <li><a th:href="@{'getcity/7'}"  style="color:#4e4f50">武汉</a></li>
+                            <li><a th:href="@{'getcity/8'}"  style="color:#4e4f50">南京</a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 -->
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <!--  <li>
+                      <a href="#overview" class="scroll">城市</a>
+                  </li>  -->
+
+                <li class="dropdown"><a href="/data/major" class="dropdown-toggle" data-toggle="dropdown"> 专业 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a th:href="@{'getmajor/1'}"  style="color:#4e4f50">工商管理</a></li>
+                            <li><a th:href="@{'getmajor/2'}"  style="color:#4e4f50">人力资源管理</a></li>
+                            <li><a th:href="@{'getmajor/3'}"  style="color:#4e4f50">财务管理</a></li>
+                            <li><a th:href="@{'getmajor/4'}" style="color:#4e4f50">信息管理</a></li>
+                            <li><a th:href="@{'getmajor/5'}"  style="color:#4e4f50">软件工程</a></li>
+                            <li><a th:href="@{'getmajor/6'}"  style="color:#4e4f50">计算机科学</a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 -->
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <li>
+                    <a href="/data/chat" class="scroll">讨论</a>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <li>
+                    <a href="/user/login" class="active">登录</a>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <li>
+                    <a href="/user/register"  class="active">注册</a>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+            </ul>
+        </div>
+
+    </nav>
+    <!-- //nav -->
+</header>
+
+
+<section class="" id="faq">
+    <div class="">
+        <div class="">
+            <div class=" ">
+
+                <section class="features">
+
+                    <div>
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <br class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li><a style="color:#353434">城市：</a></li>
+                                </ul>
+
+                                <!--返回城市-->
+                                <form class="navbar-form navbar-left">
+                                    <div class="form-group">
+                                        <input type="text" th:value="${nums}" style="color:#31c2d4;width:55px;height:30px;"  class="form-control" name="City">
+                                    </div>
+                                </form>
+
+
+                                <ul class="nav navbar-nav">
+                                    <li><a href="/data/getcity/1" style="color:#1f0c20">北京</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav">
+                                    <li><a href="/data/getcity/2" style="color: #1f0c20">上海</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav">
+                                    <li><a href="/data/getcity/3" style="color: #353434">广州</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav">
+                                    <li><a href="/data/getcity/4" style="color: #353434">深圳</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav">
+                                    <li><a href="/data/getcity/5" style="color: #353434">杭州</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav">
+                                    <li><a href="/data/getcity/6" style="color:#353434">成都</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav">
+                                    <li><a href="/data/getcity/7" style="color: #1f0c20">武汉</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav">
+                                    <li><a href="/data/getcity/8" style="color:#353434">南京</a></li>
+                                </ul>
+                                <!--搜索-->
+
+                                <form class="form-inline col-lg-18" method="post" action="/data/postcity/">
+                                    <span>城市:</span>
+                                    <input type="text" th:value="${nums}" class="form-control" name="City">
+                                    <span>职位:</span>
+                                    <input type="text" th:value="${pos}" class="form-control" name="Position">
+                                    <button type="submit" class="btn btn-info"> &nbsp;查询</button>
+                                </form>
+
+
+                            </div><!-- /.navbar-collapse -->
+                        </nav>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+
+
+                    <div class="wrapper">
+                        <div class="feature" th:each="CityInfo,userStat:${city}">
+                            <div class="ficon">
+                                <img th:src="'http://localhost:8080/Bootstrap2/img/'+${CityInfo.Image}" alt="">
+                            </div>
+                            <div class="details_exp">
+                                <h3 href="/data/getcity/2" th:text="${CityInfo.Position}">abc</h3>
+                                <p th:text="${CityInfo.Description}">abc</p>
+                                <a th:text="${CityInfo.Company}">abc</a>
+                                <a target="_blank" th:href="${CityInfo.Link}">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-md-6 faq-w3agile">
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <section class="footer footer_w3layouts_section_1its py-5" style="height:300 px;">
+        <div class="container py-md-3">
+            <div class="footer-grid_section text-center" data-aos="zoom-in" padding:5px; style="height: 40x;">
+                <ul class="social_section_1info">
+                    <li class="mb-2 facebook"><a href="#"><i class="fab mr-1 fa-facebook-f"></i>facebook</a></li>
+                    <li class="mb-2 twitter"><a href="#"><i class="fab mr-1 fa-twitter"></i>twitter</a></li>
+                    <li class="google"><a href="#"><i class="fab mr-1 fa-google-plus-g"></i>google</a></li>
+                    <li class="linkedin"><a href="#"><i class="fab mr-1 fa-linkedin-in"></i>linkedin</a></li>
+                </ul>
+            </div>
+
+            <div class="row footer-top mt-md-5 mt-4"style="height: 150px;">
+                <div class="col-lg-4 col-md-6 footer-grid_section_1its_w3" data-aos="fade-right">
+                    <div class="footer-title">
+                        <h3>关 于 我 们</h3>
+                    </div>
+                    <div class="footer-text">
+                        <p>产 品 介 绍 </p>
+                        <p>相 关 新 闻  <a href="mailto:info@example.com">info@example.com</a></p>
+                        <p>联 系 我 们 : +12 534894364</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-4 footer-grid_section_1its_w3" data-aos="fade-up">
+                    <div class="footer-title">
+                        <h3>友 情 链 接</h3>
+                    </div>
+                    <div class="row">
+                        <ul class="col-6 links">
+                            <li><a href="#choose" class="scroll"> </a></li>
+                            <li><a href="#https://www.zhipin.com/?sid=sem_pz_360pc_title" class="scroll">Boss 直 聘 </a></li>
+                            <li><a href="#https://zhaopin.baidu.com/quanzhi" class="scroll">百 度 百 聘</a></li>
+                            <li><a href="#https://wh.58.com/?utm_source=sem-360-pc&spm=14623020152.6642781136&utm_campaign=sell&utm_medium=cpcq" class="scroll">58 同 城 </a></li>
+                            <li><a href="#https://join.qq.com/" class="scroll">腾 讯 校 园 招 聘 </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mt-lg-0 mt-4 col-sm-12 footer-grid_section_1its_w3" data-aos="fade-left">
+                    <div class="footer-title">
+                        <h3>用户中心</h3>
+                    </div>
+                    <ul class="col-6 links">
+                        <li><a href="#">使 用 指 南 </a></li>
+                        <li><a href="#faq" class="scroll">用 户 协 议</a></li>
+                        <li><a href="#">企 业 咨 询</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row">
+            <img src="/erweima.jpg">
+        </div>
+
+    </section>
+
+</footer>
+<!--  End Footer  -->
+
+
+
+</body>
+</html>

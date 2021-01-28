@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/echarts.js"></script>
+
+</head>
+<body>
+
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="width: 600px;height:400px;"></div>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var Chart41 = echarts.init(document.getElementById('main'));
+
+    // 指定图表的配置项和数据
+    var option;
+    var data = [
+        [[${data411}]],
+        [[${data412}]],
+        [[${data413}]],
+        [[${data414}]],
+        [[${data415}]],
+        [[${data416}]],
+        [[${data417}]],
+        [[${data418}]]
+    ];
+
+
+    var cities = ['上海', '北京', '南京', '广州', '成都', '杭州', '武汉', '深圳'];
+    var barHeight = 8;
+
+    option = {
+        title: {
+            text: '数据挖掘职业在各城市工资比较',
+
+        },
+        legend: {
+            show: true,
+            data: ['工资范围', '均值']
+        },
+        grid: {
+            top: 100
+        },
+        angleAxis: {
+            type: 'category',
+            data: cities
+        },
+        tooltip: {
+            show: true,
+            formatter: function (params) {
+                var id = params.dataIndex;
+                return cities[id] + '<br>最低：' + data[id][0] + '<br>最高：' + data[id][1] + '<br>平均：' + data[id][2];
+            }
+        },
+        radiusAxis: {
+        },
+        polar: {
+        },
+        series: [{
+            type: 'bar',
+            itemStyle: {
+                normal: {
+                    color: 'transparent'
+                }
+            },
+            data: data.map(function (d) {
+                return d[0];
+            }),
+            coordinateSystem: 'polar',
+            stack: '最大最小值',
+            silent: true
+        }, {
+            type: 'bar',
+            data: data.map(function (d) {
+                return d[1] - d[0];
+            }),
+            coordinateSystem: 'polar',
+            name: '工资范围',
+            stack: '最大最小值'
+        }, {
+            type: 'bar',
+            itemStyle: {
+                normal: {
+                    color: 'transparent'
+                }
+            },
+            data: data.map(function (d) {
+                return d[2] - barHeight;
+            }),
+            coordinateSystem: 'polar',
+            stack: '均值',
+            silent: true,
+            z: 20
+        }, {
+            type: 'bar',
+            data: data.map(function (d) {
+                return barHeight * 2
+            }),
+            coordinateSystem: 'polar',
+            name: '均值',
+            stack: '均值',
+            barGap: '-100%',
+            z: 20
+        }],
+        legend: {
+            show: true,
+            data: ['A', 'B', 'C']
+        }
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    Chart41.setOption(option);
+</script>
+</body>
+</html>

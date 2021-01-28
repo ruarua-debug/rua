@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en" xmls:th="http://www.thymeleaf.org" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:padding="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Home</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <!--定时刷新-->
+    <meta http-equiv="refresh" content="60">
+    <!--//定时刷新-->
+
+    <!-- animation css files -->
+    <link rel="stylesheet" href="/boot/css/animation-aos.css">
+    <link href='/static/boot/css/aos.css' rel='stylesheet prefetch' type="text/css" media="all" />
+    <!-- //animation css files -->
+
+    <!-- css files -->
+    <link href="/boot/css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+    <link href="/boot/css/style1.css" rel='stylesheet' type='text/css' /><!-- custom css -->
+    <link href="/boot/css/fontawesome-all.css" rel="stylesheet"><!-- fontawesome css -->
+    <!-- //css files -->
+    <!-- google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <!-- //下拉菜单 -->
+    <!-- 浮窗 boot1 -->
+    <link href="/boot1/css/bootstrap.css" rel="stylesheet">
+    <link href="/boot1/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Extra Styles, not needed for Mega Menu or Boostrap -->
+    <link href="/boot1/css/style.css" rel="stylesheet">
+
+    <!-- Mega Menu Style, you kinda really need Bootstrap in order for this to work -->
+    <link href="/boot1/css/mega-menu.css" rel="stylesheet">
+
+    <!-- Le Google font -->
+    <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <!--//浮窗-->
+
+    <!--搜索框-->
+
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="alternate" media="handheld"  />
+    <!-- end 云适配 -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>拉勾网-最专业的互联网招聘平台</title>
+    <meta property="qc:admins" content="23635710066417756375" />
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="baidu-site-verification" content="QIQ6KC1oZ6" />
+
+    <!-- <div class="web_root"  style="display:none">h</div> -->
+
+    <link rel="Shortcut Icon" href="h/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/bootp/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/bootp/css/external.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/bootp/css/popup.css"/>
+
+    <!--搜索框-->
+    <!--多条件查询-->
+    <style>
+        .p div{
+
+            text-align: center;
+            display: inline-block;
+            width: 30%;
+            height: 200px;
+            margin-bottom: 20px;
+            margin-right: 30px;
+
+            /*分成每行三块*/
+
+            background: #FFFFFF;
+            filter: progid:DXImageTransform.Microsoft.
+            Shadow(color=#909090,direction=120,strength=4);
+            -moz-box-shadow: 1px 1px 5px #909090;
+            -webkit-box-shadow: 1px 1px 5px  #909090;
+            box-shadow: 1px 1px 5px  #909090;
+        }
+    </style>
+
+    <!--    多条件查询按钮-->
+</head>
+<body>
+
+<!-- header -->
+<header class="index-banner">
+    <!-- nav -->
+    <nav class="main-header navShadow">
+        <div id="brand" data-aos="zoom-in-up" class="aos-init aos-animate">
+
+            <div id="logo">
+                <a href="index.html">
+                    <i class="fab fa-blackberry"></i>
+                </a>
+            </div>
+            <div id="word-mark">
+                <h1>
+                    <a href="index.html">DATABOX</a>
+                </h1>
+            </div>
+        </div>
+        <div id="menu">
+            <div id="menu-toggle">
+                <div id="menu-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <ul class="text-center text-capitalize nav-agile" data-aos="zoom-in-up" >
+                <li>
+                    <a href="/data/main" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <!--<li>
+                    <a href="#choose" class="scroll">职位</a>
+                </li>-->
+
+                <!--下拉菜单-->
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> 报表 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a target="_blank"  href="/data/position1" style="color: #4e4f50">数据挖掘</a></li>
+                            <li><a target="_blank"  href="/data/position2"  style="color:#4e4f50">人事经理</a></li>
+                            <li><a target="_blank"  href="/data/position3" style="color:#4e4f50">C++游戏开发 </a></li>
+                            <li><a target="_blank"  href="/data/position4"  style="color:#4e4f50">web前端开发师 </a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 -->
+                <li>
+                    <a href="#" class="active"></a>
+                </li>
+
+                <li>
+                    <a th:href="@{'position/0'}" class="scroll">职位</a>
+                </li>
+                <li>
+                    <a href="#" class="active"></a>
+                </li>
+
+                <li>
+                    <a href="/data/chat1" class="scroll">讨论</a>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+
+                <li class="dropdown"><a href="#" th:text="${session.UserInfo.UserName}"  class="dropdown-toggle" data-toggle="dropdown"> 用户 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a href="/user/shoppingcar"   style="color:#4e4f50">个人中心</a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 ---->
+                <li>
+                    <a href="#" class="active"></a>
+                </li>
+
+
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> 登录 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a href="/user/login2" style="color: #4e4f50">企业用户</a></li>
+                            <li><a href="/data/admin"  style="color:#4e4f50">管理员</a></li>
+                            <li><a href="/user/login" style="color:#4e4f50">退出登陆 </a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 -->
+                <li>
+                    <a href="#" class="active"></a>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> 注册 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a href="/data/register2" style="color: #4e4f50">企业用户</a></li>
+                            <li><a href="/user/register"  style="color:#4e4f50">普通用户</a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 -->
+
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+            </ul>
+        </div>
+
+    </nav>
+    <!-- //nav -->
+</header>
+<!-- //header -->
+
+
+<!-- 内容 -->
+<section class="faq-w3l py-5" id="faq">
+    <div class="container py-lg-3">
+        <div class="row faq-info">
+            <div class=" col-md-6 faq-w3agile">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //内容 -->
+
+
+<div>&nbsp;&nbsp;</div>
+<!-- 内容 -->
+<!-- 内容 -->
+<div id="container">
+
+    <div style="position:relative;left:30px;">
+        <dl class="hotSearch">
+            <dt>热门搜索：</dt>
+            <dd><a href="list.htmlJava?labelWords=label&city=全国">Java</a></dd>
+            <dd><a href="list.htmlPHP?labelWords=label&city=全国">PHP</a></dd>
+            <dd><a href="list.htmlAndroid?labelWords=label&city=全国">Android</a></dd>
+            <dd><a href="list.htmliOS?labelWords=label&city=全国">iOS</a></dd>
+            <dd><a href="list.html前端?labelWords=label&city=全国">前端</a></dd>
+            <dd><a href="list.html产品经理?labelWords=label&city=全国">产品经理</a></dd>
+            <dd><a href="list.htmlUI?labelWords=label&city=全国">UI</a></dd>
+            <dd><a href="list.html运营?labelWords=label&city=全国">运营</a></dd>
+            <dd><a href="list.htmlBD?labelWords=label&city=全国">BD</a></dd>
+            <dd><a href="list.html?gx=实习&city=全国">实习</a></dd>
+        </dl>
+    </div>
+    <div>&nbsp;</div>
+
+    <div class="" style="position:relative;left:30px;">
+        <style>
+            .ui-autocomplete{width:488px;background:#fafafa !important;position: relative;z-index:10;border: 2px solid #91cebe;}
+            .ui-autocomplete-category{font-size:16px;color:#999;width:50px;position: absolute;z-index:11; right: 0px;/*top: 6px; */text-align:center;border-top: 1px dashed #e5e5e5;padding:5px 0;}
+            .ui-menu-item{ *width:439px;vertical-align: middle;position: relative;margin: 0px;margin-right: 50px !important;background:#fff;border-right: 1px dashed #ededed;}
+            .ui-menu-item a{display:block;overflow:hidden;}
+        </style>
+        <script type="text/javascript" src="/bootp/js/search.min.js"></script>
+
+        <div id="search_box">
+            <form id="searchForm" style="width: 900px;"  name="searchForm" action="/data/posisearch" method="get">
+                <ul id="searchType">
+                    <li data-searchtype="1" class="type_selected">职位</li>
+                </ul>
+                <!--                <div class="searchtype_arrow"></div>-->
+                <input type="text" id="search_input" name = "Position"  tabindex="1"  style="width:650px;height: 30px" th:value="${Position}"  placeholder="请输入职位名称，如：产品经理"  />
+                <button type="submit" id="search_button">搜索</button>
+
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div class="form-group" style="display: inline-block;">
+                     薪资
+                     <select style="width: 150px;" name="Salary" class="form-control" >
+                        <option value="">---不限---</option>
+                        <option value="0,2">2k以下</option>
+                        <option value="2,5">2k-5k</option>
+                        <option value="5,10">5k-10k</option>
+                        <option value="10,15">10k-15k</option>
+                        <option value="15,25">15k-25k</option>
+                        <option value="25,50">25k-50k</option>
+                        <option value="50">50k以上</option>
+                    </select>
+                </div>
+                &nbsp; &nbsp;&nbsp;&nbsp;
+                <div class="form-group" style="display: inline-block;">
+                学历要求
+                    <select style="width: 150px;" name="Education" class="form-control" >
+                        <option value="">---不限---</option>
+                        <option value="大专">大专</option>
+                        <option value="本科">本科</option>
+                        <option value="硕士">硕士</option>
+                        <option value="博士">博士</option>
+                        <option value="不限">无要求</option>
+                    </select>
+                </div>
+                &nbsp; &nbsp;&nbsp;&nbsp;
+                <div class="form-group" style="display: inline-block;">
+                工作经验
+                    <select style="width: 150px;" name="Experience" class="form-control">
+                        <option value="">---不限---</option>
+                        <option value="经验应届毕业生">应届生</option>
+                        <option value="经验3年及以下">3年及以下</option></td>
+                        <option value="经验3-5年">3-5年</option>
+                        <option value="经验5-10年">5-10年</option>
+                        <option value="经验10年以上">10年以上</option>
+                        <option value="经验不限">无要求</option>
+                    </select>
+                </div>
+                &nbsp; &nbsp;&nbsp;&nbsp;
+                <div class="form-group" style="display: inline-block;">
+                    城市
+                    <select style="width: 150px;" name="City" class="form-control" >
+                        <option value="">---不限---</option>
+                        <option value="北京">北京</option>
+                        <option value="上海">上海</option>
+                        <option value="广州">广州</option>
+                        <option value="深圳">深圳</option>
+                        <option value="武汉">武汉</option>
+                        <option value="杭州">杭州</option>
+                        <option value="南京">南京</option>
+                        <option value="成都">成都</option>
+                        <option value="其他">其他</option>
+                    </select>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+        <!--       end 多条件查询-->
+        <div>&nbsp;&nbsp;&nbsp;</div>
+        <div>&nbsp;&nbsp;&nbsp;</div>
+        <div>&nbsp;&nbsp;&nbsp;</div>
+        <div>&nbsp;&nbsp;&nbsp;</div>
+
+        <div id="tip_didi" class="dn">
+            <span>亲，“嘀嘀打车”已更名为“滴滴打车”了哦，我们已帮您自动跳转~</span>
+            <a href="javascript:;">我知道了</a>
+        </div>
+
+
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+
+
+
+        <!-- 职位展示 -->
+        <section class="choose py-5" id="choose" >
+            <div class="container py-md-3">
+                <h3 class="heading mb-5 text-center" data-aos="zoom-in" > POSITION LIST</h3>
+                <div class="feature-grids row">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-right"  th:each="CompanyInfo,userStat:${posi.list}">
+                        <div class="f1 icon3 p-4">
+<!--                            <img src="/bootp/images/print.png"/>-->
+                            <i class="fab fa-bitcoin"  style="width: 31px ; height: 31px;background-color: #FFFFFF;" ></i>
+                            <h4 class="my-3" th:text="${CompanyInfo.Position}" style="display:inline-table;">职位</h4>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a target="_blank" th:href="@{'/data/detail/'+${CompanyInfo.PositionID}}" >查看详情</a><br>
+                            <p style="display:inline-table;">公司：</p><p th:text="${CompanyInfo.Company}"  class="my-3" style="display:inline-table;font-size: larger;font-family:sans-serif;"><b>公司</b></p><br>
+                            <p style="display:inline-table;">城市：</p> <p th:text="${CompanyInfo.City}" style="display:inline-table;">城市</p>
+                            <p style="display:inline-table;float: right;" >k</p><p th:text="${CompanyInfo.Salary}" style="display:inline-table;float: right;">工资</p><p style="display:inline-table;float: right;">工资：</p><br>
+                            <p style="display:inline-table;">学历：</p><p th:text="${CompanyInfo.Education}" style="display:inline-table;">学历</p> &nbsp; &nbsp; &nbsp;
+                            <p th:text="${CompanyInfo.Experience}" style="display:inline-table;float: right;">经验</p>
+                        </div>
+                    </div>
+<!--                    <div class="col-lg-4 col-md-6" data-aos="fade-up">-->
+<!--                        <div class="f1 icon2 p-4">-->
+<!--                            <i class="fab fa-codepen"></i>-->
+<!--                            <h3 class="my-3">Safe & Secure</h3>-->
+<!--                            <p>Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id erat eu ullamcorper. Nunc id ipsum.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-4 col-md-6 mt-lg-0 mt-4" data-aos="fade-left">-->
+<!--                        <div class="f1 icon3 p-4">-->
+<!--                            <i class="fab fa-bitcoin"></i>-->
+<!--                            <h3 class="my-3">Fresh Interfaces</h3>-->
+<!--                            <p>Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id erat eu ullamcorper. Nunc id ipsum.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <nav aria-label="Page navigation example" style="float: right;">
+                        <ul class="pagination pagination-template d-flex justify-content-center">
+                            <li class="page-item">
+                                <a th:href="@{'/data/position/'+${id}(pageIndex=${posi.pageNum-1},pageSize=12)}"  aria-label="Next"class="page-link">
+                                    <i class="fa fa-angle-left"></i></a>
+                            </li>
+
+                            <th:block th:each="nav:${posi.navigatepageNums}">
+                                <li class="page-item" th:class="${nav==posi.pageNum}?'active':''">
+                                    <a th:href="@{'/data/position/'+${id}(pageIndex=${nav},pageSize=12)}"
+                                       th:text="${nav}" class="page-link">1</a>
+                                </li>
+                            </th:block>
+
+                            <li class="page-item">
+                                <a th:href="@{'/data/position/'+${id}(pageIndex=${posi.pageNum+1},pageSize=12)}" aria-label="Next" class="page-link">
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <!-- //职位展示 -->
+
+
+    </div>
+
+
+</body>
+
+<div class="clear"></div>
+<input type="hidden" id="resubmitToken" value="" />
+<a id="backtop" title="回到顶部" rel="nofollow"></a>
+</div><!-- end #container -->
+<!-- 内容 -->
+<!-- 内容 -->
+
+<script>
+    $(function(){
+        /***************************
+         * 分页
+         */
+        $('.Pagination').pager({
+            currPage: 1,
+            pageNOName: "pn",
+            form: "searchForm",
+            pageCount: 30,
+            pageSize:  5
+        });
+
+        $(".workplace dd").not('.more').children('a').click(function(){
+            $('#lc').val(1);
+            editForm("cityInput" , $(this).html());
+        });
+
+        $("#box_expectCity dd span").click(function(){
+            $('#lc').val(1);
+            editForm("cityInput" , $(this).html());
+        });
+
+        $('#options dd div').click(function(){
+            var firstName = $(this).parents('dl').children('dt').text();
+            var fn = $.trim(firstName);
+            if (fn=="月薪范围"){
+                editForm("yxInput" , $(this).html());
+            }
+            else if(fn=="工作经验"){
+                editForm("gjInput" , $(this).html());
+            }
+            else if(fn=="最低学历"){
+                editForm("xlInput" , $(this).html());
+            }
+            else if(fn=="工作性质"){
+                editForm("gxInput" , $(this).html());
+            }
+            else if(fn=="发布时间"){
+                editForm("stInput" , $(this).html());
+            }
+        });
+
+        $('#selected ul').delegate('li span.select_remove','click',function(event){
+            var firstName = $(this).parent('li').find('strong').text();
+            var fn = $.trim(firstName);
+            if (fn=="月薪范围")
+                editForm("yxInput" , "");
+            else if(fn=="工作经验")
+                editForm("gjInput" , "");
+            else if(fn=="最低学历")
+                editForm("xlInput" , "");
+            else if(fn=="工作性质")
+                editForm("gxInput" , "");
+            else if(fn=="发布时间")
+                editForm("stInput" , "");
+        });
+
+        /* search结果飘绿	*/
+        (function($) {
+            var searchVal = $('#search_input').val();
+            var reg = /\s/g;
+            searchVal = searchVal.replace(reg, "").split("");
+
+            var resultL = '';
+            var resultR = '';
+            $('.hot_pos li').each(function(){
+                resultL = $('.hot_pos_l a',this).text().split("");
+                $.each(resultL,function(i,v){
+                    if($.inArray(v.toLowerCase(),searchVal) != -1 || $.inArray(v.toUpperCase(),searchVal) != -1){
+                        resultL[i] = '<span>'+ v +'</span>';
+                    }
+                });
+                $('.hot_pos_l a',this).html(resultL.join(''));
+
+                resultR = $('.hot_pos_r .mb10 a',this).text().split("");
+                $.each(resultR,function(i,v){
+                    if($.inArray(v.toLowerCase(),searchVal) != -1 || $.inArray(v.toUpperCase(),searchVal) != -1){
+                        resultR[i] = '<span>'+ v +'</span>';
+                    }
+                });
+                $('.hot_pos_r .mb10 a',this).html(resultR.join(''));
+            });
+
+        })(jQuery);
+
+        //didi tip
+        if($.cookie('didiTip') != 1 && false){
+            $('#tip_didi').show();
+        }
+        $('#tip_didi a').click(function(){
+            $(this).parent().remove();
+            $.cookie('didiTip',1,{ expires: 30, path: '/'});
+        });
+
+    });
+
+    function editForm(inputId,inputValue){
+        $("#"+inputId).val(inputValue);
+        var keyword = $.trim($('#search_input').val());
+        var reg =  /[`~!@\$%\^\&\*\(\)_<>\?:"\{\},\\\/;'\[\]]/ig;
+        var re = /#/g;
+        var r = /\./g;
+        var kw = keyword.replace(reg," ");
+
+        if(kw == ''){
+            $('#searchForm').attr('action','list.html所有职位').submit();
+        }else{
+            kw = kw.replace(re,'井');
+            kw = kw.replace(r,'。');
+            $('#searchForm').attr('action','list.html'+kw).submit();
+        }
+        //$("#searchForm").submit();
+    }
+</script>
+
+<!-- js -->
+<script src="/boot/js/jquery-2.2.3.min.js"></script>
+<script src="/boot/js/bootstrap.js"></script>
+<!-- //js -->
+
+<!-- animation js -->
+<script src='/boot/js/aos.js'></script>
+<script>
+    AOS.init({
+        easing: 'ease-out-back',
+        duration: 1000
+    });
+
+</script>
+<!-- //animation js -->
+
+<!-- testimonials  Responsiveslides -->
+<script src="/boot/js/responsiveslides.min.js"></script>
+<script>
+    // You can also use"$(window).load(function() {"
+    $(function () {
+        // Slideshow 4
+        $("#slider3").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: false,
+            speed: 500,
+            namespace: "callbacks",
+            before: function () {
+                $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+                $('.events').append("<li>after event fired.</li>");
+            }
+        });
+
+    });
+</script>
+<!-- //testimonials  Responsiveslides -->
+
+<!-- sticky nav bar-->
+<script>
+    $(() => {
+
+        //On Scroll Functionality
+        $(window).scroll(() => {
+            var windowTop = $(window).scrollTop();
+            windowTop > 100 ? $('nav').addClass('navShadow') : $('nav').removeClass('navShadow');
+            windowTop > 100 ? $('ul.nav-agile').css('top', '50px') : $('ul.nav-agile').css('top', '160px');
+        });
+
+        //Click Logo To Scroll To Top
+        $('#logo').on('click', () => {
+            $('html,body').animate({
+                scrollTop: 0
+            }, 500);
+        });
+
+        /*
+         //Smooth Scrolling Using Navigation Menu
+         $('a[href*="#"]').on('click', function (e) {
+           $('html,body').animate({
+             scrollTop: $($(this).attr('href')).offset().top - 100
+           }, 500);
+           e.preventDefault();
+         });
+        */
+
+        //Toggle Menu
+        $('#menu-toggle').on('click', () => {
+            $('#menu-toggle').toggleClass('closeMenu');
+            $('ul').toggleClass('showMenu');
+
+            $('li').on('click', () => {
+                $('ul').removeClass('showMenu');
+                $('#menu-toggle').removeClass('closeMenu');
+            });
+        });
+
+    });
+</script>
+<!-- //sticky nav bar -->
+
+<script src="/boot/js/smoothscroll.js"></script><!-- Smooth scrolling -->
+
+<!-- start-smoth-scrolling -->
+<script src="/boot/js/move-top.js"></script>
+<script src="/boot/js/easing.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({
+                scrollTop: $(this.hash).offset().top
+            }, 900);
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        /*
+        var defaults = {
+              containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+         };
+        */
+
+        $().UItoTop({
+            easingType: 'easeOutQuart'
+        });
+
+    });
+</script>
+<!-- //end-smoth-scrolling -->
+
+<!-- 下拉菜单 -->
+
+<script src="/boot1/js/bootstrap.min.js"></script>
+<!--//下拉菜单-->
+<!--    搜索框-->
+
+<script type="text/javascript" src="/bootp/js/core.min.js"></script>
+<script type="text/javascript" src="/bootp/js/popup.min.js"></script>
+<!--    搜索框-->
+<!--多条件查询-->
+<!--多条件查询-->
+<script src="/bootp/js/jquery.1.10.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/bootp/js/jquery.lib.min.js"></script>
+<script src="/bootp/js/ajaxfileupload.js" type="text/javascript"></script>
+<script type="text/javascript" src="/bootp/js/additional-methods.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="/bootp/js/excanvas.js"></script>
+<![endif]-->
+<script type="text/javascript">
+    var youdao_conv_id = 271546;
+</script>
+<script type="text/javascript" src="/bootp/js/conv.js"></script>
+<script type="text/javascript">
+    var ctx = "h";
+    console.log(1);
+</script>
+<script>
+    addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+</script>
+
+<script id="allmobilize" charset="utf-8" src="/bootp/js/allmobilize.min.js"></script>
+</html>

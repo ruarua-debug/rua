@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:text-align="http://www.w3.org/1999/xhtml" xmlns:border="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>公司详情</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+    <!-- animation css files -->
+    <link rel="stylesheet" href="/BootStrap1/css/animation-aos.css">
+    <link href='/BootStrap1/css/aos.css' rel='stylesheet prefetch' type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/BootStrap3/css/main_responsive.css">
+    <!-- //animation css files -->
+
+    <!-- css files -->
+    <link href="/BootStrap1/css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+    <link href="/BootStrap1/css/style1.css" rel='stylesheet' type='text/css' /><!-- custom css -->
+    <link href="/BootStrap1/css/fontawesome-all.css" rel="stylesheet"><!-- fontawesome css -->
+    <!-- //css files -->
+
+    <!-- google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <!-- //google fonts -->
+    <link href="/BootStrap4/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/BootStrap4/css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+<body>
+
+<!-- header -->
+<header class="index-banner">
+    <!-- nav -->
+    <nav class="main-header navShadow">
+        <div id="brand" data-aos="zoom-in-up" class="aos-init aos-animate">
+
+            <div id="logo">
+                <a href="index.html">
+                    <i class="fab fa-blackberry"></i>
+                </a>
+            </div>
+            <div id="word-mark">
+                <h1>
+                    <a href="index.html">DATABOX</a>
+                </h1>
+            </div>
+        </div>
+        <div id="menu">
+            <div id="menu-toggle">
+                <div id="menu-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <ul class="text-center text-capitalize nav-agile" data-aos="zoom-in-up" >
+                <li>
+                    <a href="/data/main" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <!--<li>
+                    <a href="#choose" class="scroll">职位</a>
+                </li>-->
+
+                <!--下拉菜单-->
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> 报表 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a target="_blank"  href="/data/position1" style="color: #4e4f50">数据挖掘</a></li>
+                            <li><a target="_blank"  href="/data/position2"  style="color:#4e4f50">人事经理</a></li>
+                            <li><a target="_blank"  href="/data/position3" style="color:#4e4f50">C++游戏开发 </a></li>
+                            <li><a target="_blank"  href="/data/position4"  style="color:#4e4f50">web前端开发师 </a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 -->
+                <li>
+                    <a href="#" class="active"></a>
+                </li>
+
+                <li>
+                    <a th:href="@{'position/0'}" class="scroll">职位</a>
+                </li>
+                <li>
+                    <a href="#" class="active"></a>
+                </li>
+
+                <li>
+                    <a href="/data/chat1" class="scroll">讨论</a>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+
+                <li class="dropdown"><a href="#" th:text="${session.UserInfo.UserName}"  class="dropdown-toggle" data-toggle="dropdown"> 用户 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a href="/user/shoppingcar"   style="color:#4e4f50">个人中心</a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 ---->
+                <li>
+                    <a href="#" class="active"></a>
+                </li>
+
+
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> 登录 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a href="/user/login2" style="color: #4e4f50">企业用户</a></li>
+                            <li><a href="/data/admin"  style="color:#4e4f50">管理员</a></li>
+                            <li><a href="/user/login" style="color:#4e4f50">退出登陆 </a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 -->
+                <li>
+                    <a href="#" class="active"></a>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> 注册 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a href="/data/register2" style="color: #4e4f50">企业用户</a></li>
+                            <li><a href="/user/register"  style="color:#4e4f50">普通用户</a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 -->
+
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+            </ul>
+        </div>
+
+    </nav>
+    <!-- //nav -->
+</header>
+<!-- //header -->
+<!-- banner bottom -->
+
+<section class="banner-bottom py-2">
+    <div class="container py-md-3">
+    </div>
+</section>
+
+<!-- //banner bottom -->
+<div class="clear"></div>
+
+<section class="features">
+    <div class="container" >
+        <div id="page-content">
+            <section class="blog-page">
+                <div class="container">
+                    <div class="row" >
+                        <div class="col-sm-12" >
+                            <div class="single-post">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" class="btn btn-outline-info"><a th:href="@{'/data/getcompany/'+${Number}}">公司简介</a></button>
+                                    <button type="button" class="btn btn-outline-info"><a th:href="@{'/data/getcompany1?cname='+${cname}}">招聘职位</a></button>
+                                    <button type="button" class="btn btn-outline-info"><a href="/data/position1">更多公司</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div>
+
+            <div class="wrapper" text-align:center border:1px solid #000>
+                <div>
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid" >
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li><a th:href="@{'getcompany1?cname='+${cname}+'&id=0'}" style="color: #0b2e13">全部</a>
+                                        <input type="text" style="width:55px;height:20px;" class="form-control" th:value="${fun}">
+                                    </li>
+                                </ul>
+                                <ul class="nav navbar-nav">
+                                    <li><a th:href="@{'getcompany1?cname='+${cname}+'&id=1'}" style="color: #0b2e13">技术</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav">
+                                    <li><a th:href="@{'getcompany1?cname='+${cname}+'&id=2'}" style="color: #0b2e13">产品</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav">
+                                    <li><a th:href="@{'getcompany1?cname='+${cname}+'&id=3'}" style="color: #0b2e13">运营</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav">
+                                    <li><a th:href="@{'getcompany1?cname='+${cname}+'&id=4'}" style="color: #0b2e13">销售</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div><br>
+
+                <div class="feature"  th:each="PositionInfo,userStat:${company1}">
+                    <div class="ficon">
+                        <img src="/BootStrap3/img/icon21.png" alt="">
+                    </div>
+                    <div class="details_exp">
+                        <h3 th:text="${PositionInfo.Position}">Java开发师</h3>
+                        <p th:text="${PositionInfo.Salary}">1-2k</p>
+                        <p th:text="${PositionInfo.Description}">15-20k/月|本科及以上</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tlinks">Collect from </div>
+</section>
+
+<!--footer -->
+<footer>
+    <section class="footer footer_w3layouts_section_1its py-5" style="height:300 px;">
+        <div class="container py-md-3">
+            <div class="footer-grid_section text-center" data-aos="zoom-in" padding:5px; style="height: 40x;">
+                <ul class="social_section_1info">
+                    <li class="mb-2 facebook"><a href="#"><i class="fab mr-1 fa-facebook-f"></i>facebook</a></li>
+                    <li class="mb-2 twitter"><a href="#"><i class="fab mr-1 fa-twitter"></i>twitter</a></li>
+                    <li class="google"><a href="#"><i class="fab mr-1 fa-google-plus-g"></i>google</a></li>
+                    <li class="linkedin"><a href="#"><i class="fab mr-1 fa-linkedin-in"></i>linkedin</a></li>
+                </ul>
+            </div>
+
+            <div class="row footer-top mt-md-5 mt-4"style="height: 150px;">
+                <div class="col-lg-4 col-md-6 footer-grid_section_1its_w3" data-aos="fade-right">
+                    <div class="footer-title">
+                        <h3>关 于 我 们</h3>
+                    </div>
+                    <div class="footer-text">
+                        <p>产 品 介 绍 </p>
+                        <p>相 关 新 闻  <a href="mailto:info@example.com">info@example.com</a></p>
+                        <p>联 系 我 们 : +12 534894364</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-4 footer-grid_section_1its_w3" data-aos="fade-up">
+                    <div class="footer-title">
+                        <h3>友 情 链 接</h3>
+                    </div>
+                    <div class="row">
+                        <ul class="col-6 links">
+                            <li><a href="#choose" class="scroll"> </a></li>
+                            <li><a href="#https://www.zhipin.com/?sid=sem_pz_360pc_title" class="scroll">Boss 直 聘 </a></li>
+                            <li><a href="#https://zhaopin.baidu.com/quanzhi" class="scroll">百 度 百 聘</a></li>
+                            <li><a href="#https://wh.58.com/?utm_source=sem-360-pc&spm=14623020152.6642781136&utm_campaign=sell&utm_medium=cpcq" class="scroll">58 同 城 </a></li>
+                            <li><a href="#https://join.qq.com/" class="scroll">腾 讯 校 园 招 聘 </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mt-lg-0 mt-4 col-sm-12 footer-grid_section_1its_w3" data-aos="fade-left">
+                    <div class="footer-title">
+                        <h3>用户中心</h3>
+                    </div>
+                    <ul class="col-6 links">
+                        <li><a href="#">使 用 指 南 </a></li>
+                        <li><a href="#faq" class="scroll">用 户 协 议</a></li>
+                        <li><a href="#">企 业 咨 询</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row">
+            <img src="/erweima.jpg">
+        </div>
+
+    </section>
+
+</footer>
+<!-- //footer -->
+
+<!-- copyright -->
+<div class="cpy-right text-center py-3"style="height: 40px;">
+    <p class="">Copyright &copy; 2019.Company name All rights reserved.</p>
+</div>
+<!-- //copyright -->
+
+<!-- Vertically centered Modal -->
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-capitalize text-center" id="exampleModalLongTitle"> <i class="fab fa-blackberry"></i> Landing</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save Changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Vertically centered Modal -->
+
+<!-- video Modal Popup -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Video Overview</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body video">
+                <iframe src=""></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save Changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //video Model Popup -->
+
+<!--/Login-->
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="login px-4 mx-auto mw-100">
+                    <h5 class="text-center mb-4">Login Now</h5>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label class="mb-2">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required="">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label class="mb-2">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="" required="">
+                        </div>
+                        <div class="form-check mb-2">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit mt-2">Sign In</button>
+                        <p class="text-center pb-4">
+                            <a href="#" data-toggle="modal2" data-target="#exampleModalCenter"> Don't have an account?</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--//Login-->
+
+<!-- js -->
+<script src="/BootStrap1/js/jquery-2.2.3.min.js"></script>
+<script src="/BootStrap1/js/bootstrap.js"></script>
+<!-- //js -->
+
+<!-- animation js -->
+<script src='/BootStrap1/js/aos.js'></script>
+<script>
+    AOS.init({
+        easing: 'ease-out-back',
+        duration: 1000
+    });
+
+</script>
+<!-- //animation js -->
+
+<!-- testimonials  Responsiveslides -->
+<script src="/BootStrap1/js/responsiveslides.min.js"></script>
+<script>
+    // You can also use"$(window).load(function() {"
+    $(function () {
+        // Slideshow 4
+        $("#slider3").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: false,
+            speed: 500,
+            namespace: "callbacks",
+            before: function () {
+                $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+                $('.events').append("<li>after event fired.</li>");
+            }
+        });
+
+    });
+</script>
+<!-- //testimonials  Responsiveslides -->
+
+<!-- sticky nav bar-->
+<script>
+    $(() => {
+
+        //On Scroll Functionality
+        $(window).scroll(() => {
+            var windowTop = $(window).scrollTop();
+    windowTop > 100 ? $('nav').addClass('navShadow') : $('nav').removeClass('navShadow');
+    windowTop > 100 ? $('ul.nav-agile').css('top', '50px') : $('ul.nav-agile').css('top', '160px');
+    });
+
+    //Click Logo To Scroll To Top
+    $('#logo').on('click', () => {
+        $('html,body').animate({
+        scrollTop: 0
+    }, 500);
+    });
+
+    /*
+     //Smooth Scrolling Using Navigation Menu
+     $('a[href*="#"]').on('click', function (e) {
+       $('html,body').animate({
+         scrollTop: $($(this).attr('href')).offset().top - 100
+       }, 500);
+       e.preventDefault();
+     });
+    */
+
+    //Toggle Menu
+    $('#menu-toggle').on('click', () => {
+        $('#menu-toggle').toggleClass('closeMenu');
+    $('ul').toggleClass('showMenu');
+
+    $('li').on('click', () => {
+        $('ul').removeClass('showMenu');
+    $('#menu-toggle').removeClass('closeMenu');
+    });
+    });
+
+    });
+</script>
+<!-- //sticky nav bar -->
+
+<script src="/BootStrap1/js/smoothscroll.js"></script><!-- Smooth scrolling -->
+
+<!-- start-smoth-scrolling -->
+<script src="/BootStrap1/js/move-top.js"></script>
+<script src="/BootStrap1/js/easing.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({
+                scrollTop: $(this.hash).offset().top
+            }, 900);
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        /*
+        var defaults = {
+              containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+         };
+        */
+
+        $().UItoTop({
+            easingType: 'easeOutQuart'
+        });
+
+    });
+</script>
+<!-- //end-smoth-scrolling -->
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/echarts.js"></script>
+
+</head>
+<body>
+
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="width: 600px;height:400px;"></div>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var Chart6 = echarts.init(document.getElementById('main'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            text: '不同城市不同行业工资比较'
+        },
+        tooltip : {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                label: {
+                    backgroundColor: '#6a7985'
+                }
+            }
+        },
+        legend: {
+            data:['数据挖掘','web开发','C++游戏开发','人事经理']
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis : [
+            {
+                type : 'category',
+                boundaryGap : false,
+                data : ['上海','北京','南京','广州','成都','杭州','武汉','深圳']
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                name:'数据挖掘',
+                type:'line',
+                stack: '总量',
+                areaStyle: {},
+                data:[[${data1}]]
+            },
+            {
+                name:'web开发',
+                type:'line',
+                stack: '总量',
+                areaStyle: {},
+                data:[[${data2}]]
+            },
+            {
+                name:'C++游戏开发',
+                type:'line',
+                stack: '总量',
+                areaStyle: {},
+                data:[[${data3}]]
+            },
+            {
+                name:'人事经理',
+                type:'line',
+                stack: '总量',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'top'
+                    }
+                },
+                areaStyle: {normal: {}},
+                data:[[${data4}]]
+            }
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    Chart6.setOption(option);
+</script>
+</body>
+</html>

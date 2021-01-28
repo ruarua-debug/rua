@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>C++游戏开发工程师分析报告</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- 图表 -->
+    <script src="/mychart/js/jquery.min.js"></script>
+    <script src="/mychart/js/echarts.js"></script>
+    <link href="/boot3/css/styles.css" rel="stylesheet">
+
+    <!-- 图表3-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+    <!-- //图表 3-->
+
+    <!-- //图表 -->
+    <!-- animation css files -->
+    <link rel="stylesheet" href="/boot/css/animation-aos.css">
+    <link href='/boot6/boot/css/aos.css' rel='stylesheet prefetch' type="text/css" media="all" />
+    <!-- //animation css files -->
+
+    <!-- css files -->
+    <link href="/boot/css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+    <link href="/boot/css/style1.css" rel='stylesheet' type='text/css' /><!-- custom css -->
+    <link href="/boot/css/fontawesome-all.css" rel="stylesheet"><!-- fontawesome css -->
+    <!-- //css files -->
+    <!-- google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <!-- //下拉菜单 -->
+    <!-- 浮窗 boot1 -->
+    <link href="/boot1/css/bootstrap.css" rel="stylesheet">
+    <link href="/boot1/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Extra Styles, not needed for Mega Menu or Boostrap -->
+    <link href="/boot1/css/style.css" rel="stylesheet">
+
+    <!-- Mega Menu Style, you kinda really need Bootstrap in order for this to work -->
+    <link href="/boot1/css/mega-menu.css" rel="stylesheet">
+
+    <!-- Le Google font -->
+    <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <!--//浮窗-->
+    <!--后台内容栏表单-->
+    <link href="/boot/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <!--//后台内容栏表单-->
+
+    <!--公司推荐-->
+    <link rel="stylesheet" href="/boot4/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/boot4/css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="/boot4/css/style.css" type="text/css" />
+    <!--//公司推荐-->
+
+</head>
+<body>
+
+
+<!-- header -->
+<header class="index-banner">
+    <!-- nav -->
+    <nav class="main-header navShadow">
+        <div id="brand" data-aos="zoom-in-up" class="aos-init aos-animate">
+
+            <div id="logo">
+                <a href="index.html">
+                    <i class="fab fa-blackberry"></i>
+                </a>
+            </div>
+            <div id="word-mark">
+                <h1>
+                    <a href="index.html">DATABOX</a>
+                </h1>
+            </div>
+        </div>
+        <div id="menu">
+            <div id="menu-toggle">
+                <div id="menu-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <ul class="text-center text-capitalize nav-agile" data-aos="zoom-in-up" >
+                <li>
+                    <a href="/data/main" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <!--<li>
+                    <a href="#choose" class="scroll">职位</a>
+                </li>-->
+
+                <!--下拉菜单-->
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> 报表 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a target="_blank"  href="/data/position1" style="color: #4e4f50">数据挖掘</a></li>
+                            <li><a target="_blank"  href="/data/position2"  style="color:#4e4f50">人事经理</a></li>
+                            <li><a target="_blank"  href="/data/position3" style="color:#4e4f50">C++游戏开发 </a></li>
+                            <li><a target="_blank"  href="/data/position4"  style="color:#4e4f50">web前端开发师 </a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 -->
+                <li>
+                    <a href="#" class="active"></a>
+                </li>
+
+                <li>
+                    <a th:href="@{'position/0'}" class="scroll">职位</a>
+                </li>
+                <li>
+                    <a href="#" class="active"></a>
+                </li>
+
+                <li>
+                    <a href="/data/chat1" class="scroll">讨论</a>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+
+                <li class="dropdown"><a href="#" th:text="${session.UserInfo.UserName}"  class="dropdown-toggle" data-toggle="dropdown"> 用户 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a href="/user/shoppingcar"   style="color:#4e4f50">个人中心</a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 ---->
+                <li>
+                    <a href="#" class="active"></a>
+                </li>
+
+
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> 登录 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a href="/user/login2" style="color: #4e4f50">企业用户</a></li>
+                            <li><a href="/data/admin"  style="color:#4e4f50">管理员</a></li>
+                            <li><a href="/user/login" style="color:#4e4f50">退出登陆 </a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 -->
+                <li>
+                    <a href="#" class="active"></a>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> 注册 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a href="/data/register2" style="color: #4e4f50">企业用户</a></li>
+                            <li><a href="/user/register"  style="color:#4e4f50">普通用户</a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 -->
+
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+            </ul>
+        </div>
+
+    </nav>
+    <!-- //nav -->
+</header>
+<!-- //header -->
+
+
+<!-- 内容-->
+
+<!--//图表搜索框-->
+
+
+<!-- 分层 -->
+<div>&nbsp;&nbsp;</div>
+<div>&nbsp;&nbsp;</div>
+<div>&nbsp;&nbsp;</div>
+
+
+<!--  图表层1  -->
+
+
+<div class="col-lg-12" >
+    <div class="card">
+        <div>&nbsp;&nbsp;</div>
+        <div>&nbsp;&nbsp;</div>
+        <div>&nbsp;&nbsp;</div>
+        <!-- Projects -->
+        <div id="projects" class="filter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title"></div>
+                        <h2>C++游戏开发工程师&nbsp; & &nbsp;Data Reports</h2>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!--搜索 -->
+
+
+                    </div> <!-- end of row -->
+                </div> <!-- end of container -->
+            </div> <!-- end of filter -->
+            <!-- end of projects -->
+
+            <div class="button-group filters-button-group" >
+                &nbsp;&nbsp;&nbsp; <div class="body" >
+                &nbsp; &nbsp; &nbsp;
+                <form class="form-inline col-lg-12" style="margin-left: 500px;">
+                    &nbsp;
+                    <label><a target="_blank" class="button is-checked" href="/data/chart33" data-filter="*"><span>职位热度分布图</span></a></label>
+
+
+                </form>
+            </div>
+
+                <!-- //搜索 -->
+
+            </div> <!-- end of col -->
+            <div class="card-body">
+                <h4 class="box-title"></h4>
+            </div>
+
+            <!--间隔-->
+            <div class="row">
+                <div class="col-lg-1">
+                    <div class="card-body">
+                        <!--间隔-->
+                    </div>
+                </div>
+                <!--//间隔-->
+
+                <!-- 图表1 -->
+                <div class="col-lg-6">
+                    <div class="card-body">
+                        <!-- <canvas id="TrafficChart"></canvas>   -->
+                        <!-- 图表框 -->
+
+                        <div id="main" style="width: 400px;height:400px;"></div>
+                        <script th:inline="javascript">
+                            // 基于准备好的dom，初始化echarts实例
+                            var chart1 = echarts.init(document.getElementById('main'));
+
+                            // 指定图表的配置项和数据
+                            var option = {
+                                title: {
+                                    text: 'C++游戏开发工程师在不同公司的工资情况(单位:k)'
+                                },
+                                tooltip: {},
+                                legend: {
+                                    data:['公司']
+                                },
+                                xAxis: {
+                                    data: [[${rank311}]]
+                                },
+                                yAxis: {},
+                                series: [{
+                                    name: '工资',
+                                    type: 'bar',
+                                    data: [[${rank31}]]
+                                }]
+                            };
+
+                            // 使用刚指定的配置项和数据显示图表。
+                            chart1.setOption(option);
+                        </script>
+                        <!-- //图表框 -->
+                        <p>柱状图：展示C++游戏开发工程师在不同公司的薪资状况，柱形的高度代表了薪资多少。</p>
+                    </div>
+                </div>
+                <!-- //图表1 -->
+
+                <!-- 图表2 -->
+                <div class="col-lg-4">
+                    <div class="card-body">
+                        <div class="progress-box progress-1">
+
+
+                            <div id="main4" style="width: 400px;height:400px;"></div>
+                            <script th:inline="javascript">
+                                // 基于准备好的dom，初始化echarts实例
+                                var chart2 = echarts.init(document.getElementById('main4'));
+
+                                // 指定图表的配置项和数据
+                                option = {
+                                    title : {
+                                        text: 'C++游戏开发工程师学历要求占比情况',
+                                        subtext: '',
+                                        x:'center'
+                                    },
+                                    tooltip : {
+                                        trigger: 'item',
+                                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                                    },
+                                    legend: {
+                                        orient: 'vertical',
+                                        left: 'left',
+                                        data: ['不限','博士','大专','本科','硕士']
+                                    },
+                                    series : [
+                                        {
+                                            name: '访问来源',
+                                            type: 'pie',
+                                            radius : '55%',
+                                            center: ['50%', '60%'],
+                                            data:[
+                                                {value:[[${rank32}]][0], name:'不限'},
+                                                {value:[[${rank32}]][1], name:'博士'},
+                                                {value:[[${rank32}]][2], name:'大专'},
+                                                {value:[[${rank32}]][3], name:'本科'},
+                                                {value:[[${rank32}]][4], name:'硕士'},
+
+                                            ],
+                                            itemStyle: {
+                                                emphasis: {
+                                                    shadowBlur: 10,
+                                                    shadowOffsetX: 0,
+                                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                                }
+                                            }
+                                        }
+                                    ]
+                                };
+
+                                // 使用刚指定的配置项和数据显示图表。
+                                chart2.setOption(option);
+                            </script>
+                            <p>扇形图：展示了C++游戏开发工程师对学历的要求。</p>
+                        </div>
+                    </div> <!-- /.card-body -->
+                </div>
+                <!-- //图表2 -->
+
+
+
+                <!--间隔-->
+                <div class="row">
+                    <div class="col-lg-1">
+                        <div class="card-body">
+                            <!--间隔-->
+                        </div>
+                    </div>
+                    <!--//间隔-->
+
+                </div> <!-- /.row -->
+                <div class="card-body"></div>
+            </div>
+        </div><!-- /# column -->
+    </div>
+
+    <!--  /图表层1 -->
+
+
+    <!--  图表层2  -->
+
+    <div class="col-lg-12" >
+        <div class="card">
+            <div>&nbsp;&nbsp;</div>
+            <div>&nbsp;&nbsp;</div>
+            <div>&nbsp;&nbsp;</div>
+
+            <!--间隔-->
+            <div class="row">
+                <div class="col-lg-1">
+                    <div class="card-body">
+                        <!--间隔-->
+                    </div>
+                </div>
+                <!--//间隔-->
+
+                <!-- 图表3 -->
+                <div class="col-lg-5">
+                    <div class="card-body">
+                        <!-- <canvas id="TrafficChart"></canvas>   -->
+                        <!-- 图表框 -->
+
+
+                        <!-- //图表框 -->
+                    </div>
+                </div>
+                <!-- //图表3 -->
+
+                <!-- 图表4 -->
+                <div class="col-lg-5">
+                    <div class="card-body">
+
+
+                    </div> <!-- /.card-body -->
+                </div>
+                <!-- //图表4 -->
+
+
+
+
+
+                <!--间隔-->
+                <div class="row">
+                    <div class="col-lg-1">
+                        <div class="card-body">
+                            <!--间隔-->
+                        </div>
+                    </div>
+                    <!--//间隔-->
+
+                </div> <!-- /.row -->
+                <div class="card-body"></div>
+            </div>
+        </div><!-- /# column -->
+    </div>
+
+    <!--  /图表层2 -->
+
+
+    <!--  图表层3 -->
+
+
+    <div class="col-lg-12" >
+        <div class="card">
+            <div>&nbsp;&nbsp;</div>
+            <div>&nbsp;&nbsp;</div>
+            <div>&nbsp;&nbsp;</div>
+
+            <!--间隔-->
+            <div class="row">
+                <div class="col-lg-1">
+                    <div class="card-body">
+                        <!--间隔-->
+                    </div>
+                </div>
+                <!--//间隔-->
+
+                <!-- 图表3 -->
+                <div class="col-lg-5">
+                    <div class="card-body">
+                        <!-- <canvas id="TrafficChart"></canvas>   -->
+                        <!-- 图表框 -->
+                        <div id="container"  style="width: 400px;height:400px;"></div>
+                        <script th:inline="javascript">
+                            // 基于准备好的dom，初始化echarts实例
+                            var dom = document.getElementById("container");
+                            var myChart = echarts.init(dom);
+                            var app = {};
+                            option = null;
+                            app.title = '世界人口总量 - 条形图';
+
+                            option = {
+                                title: {
+                                    text: '经验的影响力'
+
+                                },
+                                tooltip: {
+                                    trigger: 'axis',
+                                    axisPointer: {
+                                        type: 'shadow'
+                                    }
+                                },
+                                legend: {
+                                    data: ['C++游戏开发工程师', 'Web前端开发']
+                                },
+                                grid: {
+                                    left: '3%',
+                                    right: '4%',
+                                    bottom: '3%',
+                                    containLabel: true
+                                },
+                                xAxis: {
+                                    type: 'value',
+                                    boundaryGap: [0, 0.00001]
+                                },
+                                yAxis: {
+                                    type: 'category',
+                                    data: ['经验应届毕业生','经验不限','经验5-10年','经验3-5年','经验1年以下','经验10年以上','经验1-3年',]
+                                },
+                                series: [
+                                    {
+                                        name: 'C++游戏开发工程师',
+                                        type: 'bar',
+                                        data:[[${rank341}]]
+                                        //data: [18203, 23489, 29034, 104970, 131744, 630230]
+                                    },
+                                    {
+                                        name: 'Web前端开发',
+                                        type: 'bar',
+                                        data: [[${rank342}]]
+                                        //data: [18203, 23489, 29034, 104970, 131744, 630230]
+                                    }
+                                ]
+                            };
+                            if (option && typeof option === "object") {
+                                myChart.setOption(option, true);
+                            }
+                        </script>
+                        <!-- //图表框 -->
+                        <p>柱状图：通过横向柱状的长度对同一行业经验影响力和不同行业经验影响力进行比较。</p>
+                    </div>
+                </div>
+                <!-- //图表1 -->
+
+
+                <!-- 图表6 -->
+                <div class="col-lg-5">
+                    <div class="card-body">
+                        <div class="progress-box progress-1">
+                            <div id="main5" style="width: 500px;height:400px;">
+                                <script th:inline="javascript">
+                                    // 基于准备好的dom，初始化echarts实例
+                                    var Chart51 = echarts.init(document.getElementById('main5'));
+
+                                    // 指定图表的配置项和数据
+                                    var option = {
+                                        title : {
+                                            text: '南丁格尔玫瑰图——C++游戏开发师(单位:k)',
+                                            subtext: '平均工资',
+                                            x:'center'
+                                        },
+                                        tooltip : {
+                                            trigger: 'item',
+                                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                                        },
+                                        legend: {
+                                            x : 'center',
+                                            y : 'bottom',
+                                            data:['上海','北京','南京','广州','成都','杭州','武汉','深圳']
+                                        },
+                                        toolbox: {
+                                            show : true,
+                                            feature : {
+                                                mark : {show: true},
+                                                dataView : {show: true, readOnly: false},
+                                                magicType : {
+                                                    show: true,
+                                                    type: ['pie', 'funnel']
+                                                },
+                                                restore : {show: true},
+                                                saveAsImage : {show: true}
+                                            }
+                                        },
+                                        calculable : true,
+                                        series : [
+                                            {
+                                                name:'C++游戏开发师',
+                                                type:'pie',
+                                                radius : [20, 110],
+                                                center : ['25%', '50%'],
+                                                roseType : 'radius',
+                                                label: {
+                                                    normal: {
+                                                        show: false
+                                                    },
+                                                    emphasis: {
+                                                        show: true
+                                                    }
+                                                },
+                                                lableLine: {
+                                                    normal: {
+                                                        show: false
+                                                    },
+                                                    emphasis: {
+                                                        show: true
+                                                    }
+                                                },
+                                                data:[
+                                                    {value:[[${chart53data}]][0],name:'上海'},
+                                                    {value:[[${chart53data}]][1],name:'北京'},
+                                                    {value:[[${chart53data}]][2],name:'南京'},
+                                                    {value:[[${chart53data}]][3],name:'广州'},
+                                                    {value:[[${chart53data}]][4],name:'成都'},
+                                                    {value:[[${chart53data}]][5],name:'杭州'},
+                                                    {value:[[${chart53data}]][6],name:'武汉'},
+                                                    {value:[[${chart53data}]][7],name:'深圳'},
+
+
+                                                ]
+                                            },
+                                            {
+                                                name: 'C++游戏开发师',
+                                                type: 'pie',
+                                                radius: [30, 110],
+                                                center: ['75%', '50%'],
+                                                roseType: 'area',
+                                                data: [
+                                                    {value: [[${chart53data}]][0], name: '上海'},
+                                                    {value: [[${chart53data}]][1], name: '北京'},
+                                                    {value: [[${chart53data}]][2], name: '南京'},
+                                                    {value: [[${chart53data}]][3], name: '广州'},
+                                                    {value: [[${chart53data}]][4], name: '成都'},
+                                                    {value: [[${chart53data}]][5], name: '杭州'},
+                                                    {value: [[${chart53data}]][6], name: '武汉'},
+                                                    {value: [[${chart53data}]][7], name: '深圳'},
+                                                ]
+                                            }
+                                        ]
+                                    }
+
+                                    // 使用刚指定的配置项和数据显示图表。
+                                    Chart51.setOption(option);
+                                </script>
+                                <p>南丁格尔玫瑰图：用八种颜色分别代表八个城市，扇形半径或扇形面积代表C++游戏开发师在每个城市的平均薪资。
+                                </p>
+                            </div>
+                        </div>
+                    </div> <!-- /.card-body -->
+                </div>
+                <!-- //图表6 -->
+
+
+
+
+                <!--间隔-->
+                <div class="row">
+                    <div class="col-lg-1">
+                        <div class="card-body">
+                            <!--间隔-->
+                        </div>
+                    </div>
+                    <!--//间隔-->
+
+                </div> <!-- /.row -->
+                <div class="card-body"></div>
+            </div>
+        </div><!-- /# column -->
+    </div>
+
+    <!--  /图表层3 -->
+
+
+
+<!--    &lt;!&ndash;  图表层4  &ndash;&gt;-->
+
+<!--    <div class="col-lg-12" >-->
+<!--        <div class="card">-->
+<!--            <div>&nbsp;&nbsp;</div>-->
+<!--            <div>&nbsp;&nbsp;</div>-->
+<!--            <div>&nbsp;&nbsp;</div>-->
+
+<!--            &lt;!&ndash;间隔&ndash;&gt;-->
+<!--            <div class="row">-->
+<!--                <div class="col-lg-1">-->
+<!--                    <div class="card-body">-->
+<!--                        &lt;!&ndash;间隔&ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash;//间隔&ndash;&gt;-->
+
+<!--                &lt;!&ndash; 图表5 &ndash;&gt;-->
+<!--                <div class="col-lg-5">-->
+<!--                    <div class="card-body">-->
+<!--                        &lt;!&ndash; <canvas id="TrafficChart"></canvas>   &ndash;&gt;-->
+<!--                        &lt;!&ndash; 图表框 &ndash;&gt;-->
+<!--                        <div id="main7"  style="width: 500px;height:400px;"></div>-->
+<!--                        <script th:inline="javascript">-->
+<!--                            // 基于准备好的dom，初始化echarts实例-->
+<!--                            var position3 = echarts.init(document.getElementById('main7'));-->
+
+<!--                            // 指定图表的配置项和数据-->
+<!--                            var option;-->
+<!--                            var data = [-->
+<!--                                [[${data431}]],-->
+<!--                                [[${data432}]],-->
+<!--                                [[${data433}]],-->
+<!--                                [[${data434}]],-->
+<!--                                [[${data435}]],-->
+<!--                                [[${data436}]],-->
+<!--                                [[${data437}]],-->
+<!--                                [[${data438}]]-->
+<!--                            ];-->
+
+
+<!--                            var cities = ['上海', '北京', '南京', '广州', '成都', '杭州', '武汉', '深圳'];-->
+<!--                            var barHeight = 8;-->
+
+<!--                            option = {-->
+<!--                                title: {-->
+<!--                                    text: 'C++游戏开发师在各城市工资比较(单位:k)',-->
+
+<!--                                },-->
+<!--                                legend: {-->
+<!--                                    show: true,-->
+<!--                                    data: ['工资范围', '均值']-->
+<!--                                },-->
+<!--                                grid: {-->
+<!--                                    top: 100-->
+<!--                                },-->
+<!--                                angleAxis: {-->
+<!--                                    type: 'category',-->
+<!--                                    data: cities-->
+<!--                                },-->
+<!--                                tooltip: {-->
+<!--                                    show: true,-->
+<!--                                    formatter: function (params) {-->
+<!--                                        var id = params.dataIndex;-->
+<!--                                        return cities[id] + '<br>最低：' + data[id][0] + '<br>最高：' + data[id][1] + '<br>平均：' + data[id][2];-->
+<!--                                    }-->
+<!--                                },-->
+<!--                                radiusAxis: {-->
+<!--                                },-->
+<!--                                polar: {-->
+<!--                                },-->
+<!--                                series: [{-->
+<!--                                    type: 'bar',-->
+<!--                                    itemStyle: {-->
+<!--                                        normal: {-->
+<!--                                            color: 'transparent'-->
+<!--                                        }-->
+<!--                                    },-->
+<!--                                    data: data.map(function (d) {-->
+<!--                                        return d[0];-->
+<!--                                    }),-->
+<!--                                    coordinateSystem: 'polar',-->
+<!--                                    stack: '最大最小值',-->
+<!--                                    silent: true-->
+<!--                                }, {-->
+<!--                                    type: 'bar',-->
+<!--                                    data: data.map(function (d) {-->
+<!--                                        return d[1] - d[0];-->
+<!--                                    }),-->
+<!--                                    coordinateSystem: 'polar',-->
+<!--                                    name: '工资范围',-->
+<!--                                    stack: '最大最小值'-->
+<!--                                }, {-->
+<!--                                    type: 'bar',-->
+<!--                                    itemStyle: {-->
+<!--                                        normal: {-->
+<!--                                            color: 'transparent'-->
+<!--                                        }-->
+<!--                                    },-->
+<!--                                    data: data.map(function (d) {-->
+<!--                                        return d[2] - barHeight;-->
+<!--                                    }),-->
+<!--                                    coordinateSystem: 'polar',-->
+<!--                                    stack: '均值',-->
+<!--                                    silent: true,-->
+<!--                                    z: 20-->
+<!--                                }, {-->
+<!--                                    type: 'bar',-->
+<!--                                    data: data.map(function (d) {-->
+<!--                                        return barHeight * 2-->
+<!--                                    }),-->
+<!--                                    coordinateSystem: 'polar',-->
+<!--                                    name: '均值',-->
+<!--                                    stack: '均值',-->
+<!--                                    barGap: '-100%',-->
+<!--                                    z: 20-->
+<!--                                }],-->
+<!--                                legend: {-->
+<!--                                    show: true,-->
+<!--                                    data: ['A', 'B', 'C']-->
+<!--                                }-->
+<!--                            };-->
+
+<!--                            // 使用刚指定的配置项和数据显示图表。-->
+<!--                            position3.setOption(option);-->
+<!--                        </script>-->
+<!--                        <p>扇形图：通过扇形面积和距离中心点的远近程度表示C++游戏开发师在不同城市的工资比较。-->
+<!--                        </p>-->
+<!--                        &lt;!&ndash; //图表框 &ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; //图表5 &ndash;&gt;-->
+
+                <!-- //图表6 -->
+<!--                <div class="col-lg-5">-->
+<!--                    <div class="card-body">-->
+
+<!--                        <div id="main8" style="width: 500px;height:400px;">-->
+<!--                            <script th:inline="javascript">-->
+<!--                                // 基于准备好的dom，初始化echarts实例-->
+<!--                                var position2 = echarts.init(document.getElementById('main8'));-->
+
+<!--                                // 指定图表的配置项和数据-->
+<!--                                var option = {-->
+<!--                                    title: {-->
+<!--                                        text: '不同城市不同行业工资比较'-->
+<!--                                    },-->
+<!--                                    tooltip : {-->
+<!--                                        trigger: 'axis',-->
+<!--                                        axisPointer: {-->
+<!--                                            type: 'cross',-->
+<!--                                            label: {-->
+<!--                                                backgroundColor: '#6a7985'-->
+<!--                                            }-->
+<!--                                        }-->
+<!--                                    },-->
+<!--                                    legend: {-->
+<!--                                        data:['数据挖掘','web开发','C++游戏开发','人事经理']-->
+<!--                                    },-->
+<!--                                    toolbox: {-->
+<!--                                        feature: {-->
+<!--                                            saveAsImage: {}-->
+<!--                                        }-->
+<!--                                    },-->
+<!--                                    grid: {-->
+<!--                                        left: '3%',-->
+<!--                                        right: '4%',-->
+<!--                                        bottom: '3%',-->
+<!--                                        containLabel: true-->
+<!--                                    },-->
+<!--                                    xAxis : [-->
+<!--                                        {-->
+<!--                                            type : 'category',-->
+<!--                                            boundaryGap : false,-->
+<!--                                            data : ['上海','北京','南京','广州','成都','杭州','武汉','深圳']-->
+<!--                                        }-->
+<!--                                    ],-->
+<!--                                    yAxis : [-->
+<!--                                        {-->
+<!--                                            type : 'value'-->
+<!--                                        }-->
+<!--                                    ],-->
+<!--                                    series : [-->
+<!--                                        {-->
+<!--                                            name:'数据挖掘',-->
+<!--                                            type:'line',-->
+<!--                                            stack: '总量',-->
+<!--                                            areaStyle: {},-->
+<!--                                            data:[[${data1}]]-->
+<!--                                        },-->
+<!--                                        {-->
+<!--                                            name:'web开发',-->
+<!--                                            type:'line',-->
+<!--                                            stack: '总量',-->
+<!--                                            areaStyle: {},-->
+<!--                                            data:[[${data2}]]-->
+<!--                                        },-->
+<!--                                        {-->
+<!--                                            name:'C++游戏开发',-->
+<!--                                            type:'line',-->
+<!--                                            stack: '总量',-->
+<!--                                            areaStyle: {},-->
+<!--                                            data:[[${data3}]]-->
+<!--                                        },-->
+<!--                                        {-->
+<!--                                            name:'人事经理',-->
+<!--                                            type:'line',-->
+<!--                                            stack: '总量',-->
+<!--                                            label: {-->
+<!--                                                normal: {-->
+<!--                                                    show: true-->
+
+<!--                                                }-->
+<!--                                            },-->
+<!--                                            areaStyle: {normal: {}},-->
+<!--                                            data:[[${data4}]]-->
+<!--                                        }-->
+<!--                                    ]-->
+<!--                                };-->
+
+<!--                                // 使用刚指定的配置项和数据显示图表。-->
+<!--                                position2.setOption(option);-->
+<!--                            </script>-->
+
+<!--                        </div>-->
+
+<!--                    </div> &lt;!&ndash; /.card-body &ndash;&gt;-->
+<!--                    <br>-->
+<!--                    <p> 折线图：通过折线上的数字和折线面积可以比较看出不同行业在不同城市的工资水平，其中，在北京地区的四个行业工资水平高于其他地区;-->
+<!--                        数据挖掘这个行业的工资在这些地区低于其他行业工资，尤其是低于人事经理。</p>-->
+<!--                </div>-->
+                <!-- //图表6 -->
+
+
+<!--                &lt;!&ndash;间隔&ndash;&gt;-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-1">-->
+<!--                        <div class="card-body">-->
+<!--                            &lt;!&ndash;间隔&ndash;&gt;-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;//间隔&ndash;&gt;-->
+
+<!--                </div> &lt;!&ndash; /.row &ndash;&gt;-->
+<!--                <div class="card-body"></div>-->
+<!--            </div>-->
+<!--        </div>&lt;!&ndash; /# column &ndash;&gt;-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash;  /图表层4 &ndash;&gt;-->
+
+
+
+
+
+
+
+
+    <!-- //分层 -->
+
+
+    <!-- 返回顶部 -->
+    <a href="#top" target="_self" style="height: 50px;text-align:right;">返回顶部</a>
+    <!-- 返回顶部 -->
+
+
+    <div class="basic-2">
+        <div class="container">
+
+            <div class="col-lg-12">
+
+            </div> <!-- end of col -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-2 -->
+    <!-- 图表框 -->
+
+    <!-- 公司推荐栏 -->
+    <div id="page-preloader"><span class="spinner"></span></div>
+
+    <!-- banner bottom -->
+    <section class="banner-bottom py-5">
+        <div class="container py-md-3">
+            <h4 class="text-center" data-aos="zoom-in">Trusted by the world's best companies</h4>
+            <div id="partners" class="scroll-animation" data-animation="fadeInUp" data-animation-delay="0s">
+                <div class="container">
+                    <div class="carousel-wrapper">
+                        <div class="swiper-container" id="carousel">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><a th:href="@{'getcompany/1'}"><img src="/boot4/img/partner1.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a th:href="@{'getcompany/2'}"><img src="/boot4/img/partner2.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a th:href="@{'getcompany/3'}"><img src="/boot4/img/partner3.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a th:href="@{'getcompany/4'}"><img src="/boot4/img/partner4.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a th:href="@{'getcompany/5'}"><img src="/boot4/img/partner5.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a th:href="@{'getcompany/6'}"><img src="/boot4/img/partner6.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a th:href="@{'getcompany/7'}"><img src="/boot4/img/partner7.jpeg" alt=""></a></div>
+                                <div class="swiper-slide"><a th:href="@{'getcompany/8'}"><img src="/boot4/img/partner8.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a th:href="@{'getcompany/1'}"><img src="/boot4/img/partner1.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a th:href="@{'getcompany/2'}"><img src="/boot4/img/partner2.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a th:href="@{'getcompany/3'}"><img src="/boot4/img/partner3.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a th:href="@{'getcompany/4'}"><img src="/boot4/img/partner4.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a th:href="@{'getcompany/5'}"><img src="/boot4/img/partner5.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a th:href="@{'getcompany/6'}"><img src="/boot4/img/partner6.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a th:href="@{'getcompany/7'}"><img src="/boot4/img/partner7.jpeg" alt=""></a></div>
+                                <div class="swiper-slide"><a th:href="@{'getcompany/8'}"><img src="/boot4/img/partner8.jpg" alt=""></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- //banner bottom -->
+    <!-- //公司推荐栏 -->
+
+
+
+    <!-- //内容 -->
+
+
+    <!--footer -->
+    <footer>
+        <section class="footer footer_w3layouts_section_1its py-5" style="height:300 px;">
+            <div class="container py-md-3">
+                <div class="footer-grid_section text-center" data-aos="zoom-in" padding:5px; style="height:40px;">
+                    <ul class="social_section_1info">
+                        <li class="mb-2 facebook"><a href="#"><i class="fab mr-1 fa-facebook-f"></i>facebook</a></li>
+                        <li class="mb-2 twitter"><a href="#"><i class="fab mr-1 fa-twitter"></i>twitter</a></li>
+                        <li class="google"><a href="#"><i class="fab mr-1 fa-google-plus-g"></i>google</a></li>
+                        <li class="linkedin"><a href="#"><i class="fab mr-1 fa-linkedin-in"></i>linkedin</a></li>
+                    </ul>
+                </div>
+
+                <div class="row footer-top mt-md-5 mt-4"style="height: 150px;">
+                    <div class="col-lg-4 col-md-6 footer-grid_section_1its_w3" data-aos="fade-right">
+                        <div class="footer-title">
+                            <h3>关 于 我 们</h3>
+                        </div>
+                        <div class="footer-text">
+                            <p>产 品 介 绍 </p>
+                            <p>相 关 新 闻  <a href="mailto:info@example.com">info@example.com</a></p>
+                            <p>联 系 我 们 : +12 534894364</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-md-0 mt-4 footer-grid_section_1its_w3" data-aos="fade-up">
+                        <div class="footer-title">
+                            <h3>友 情 链 接</h3>
+                        </div>
+                        <div class="row">
+                            <ul class="col-6 links">
+                                <li><a href="#choose" class="scroll"> </a></li>
+                                <li><a href="#https://www.zhipin.com/?sid=sem_pz_360pc_title" class="scroll">Boss 直 聘 </a></li>
+                                <li><a href="#https://zhaopin.baidu.com/quanzhi" class="scroll">百 度 百 聘</a></li>
+                                <li><a href="#https://wh.58.com/?utm_source=sem-360-pc&spm=14623020152.6642781136&utm_campaign=sell&utm_medium=cpcq" class="scroll">58 同 城 </a></li>
+                                <li><a href="#https://join.qq.com/" class="scroll">腾 讯 校 园 招 聘 </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 mt-lg-0 mt-4 col-sm-12 footer-grid_section_1its_w3" data-aos="fade-left">
+                        <div class="footer-title">
+                            <h3>用户中心</h3>
+                        </div>
+                        <ul class="col-6 links">
+                            <li><a href="#">使 用 指 南 </a></li>
+                            <li><a href="#faq" class="scroll">用 户 协 议</a></li>
+                            <li><a href="#">企 业 咨 询</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row">
+                <img src="/erweima.jpg">
+            </div>
+
+        </section>
+
+    </footer>
+    <!-- //footer -->
+
+    <!-- copyright -->
+    <div class="cpy-right text-center py-3"style="height: 40px;">
+        <p class="">Copyright &copy; 2019.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title=""></a> - Collect from <a href="http://www.cssmoban.com/" title="" target="_blank"></a></p>
+    </div>
+    <!-- //copyright -->
+
+    <!-- Vertically centered Modal -->
+    <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-capitalize text-center" id="exampleModalLongTitle"> <i class="fab fa-blackberry"></i> Landing</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save Changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Vertically centered Modal -->
+
+    <!-- video Modal Popup -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Video Overview</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body video">
+                    <iframe src=""></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save Changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //video Model Popup -->
+
+    <!--/Login-->
+    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="login px-4 mx-auto mw-100">
+                        <h5 class="text-center mb-4">Login Now</h5>
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <label class="mb-2">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required="">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label class="mb-2">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="" required="">
+                            </div>
+                            <div class="form-check mb-2">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary submit mt-2">Sign In</button>
+                            <p class="text-center pb-4">
+                                <a href="#" data-toggle="modal2" data-target="#exampleModalCenter"> Don't have an account?</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//Login-->
+
+    <!-- js -->
+    <script src="/boot/js/jquery-2.2.3.min.js"></script>
+    <script src="/boot/js/bootstrap.js"></script>
+    <!-- //js -->
+
+    <!-- animation js -->
+    <script src='/boot/js/aos.js'></script>
+    <script>
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+        });
+
+    </script>
+    <!-- //animation js -->
+
+    <!-- testimonials  Responsiveslides -->
+    <script src="/boot/js/responsiveslides.min.js"></script>
+    <script>
+        // You can also use"$(window).load(function() {"
+        $(function () {
+            // Slideshow 4
+            $("#slider3").responsiveSlides({
+                auto: true,
+                pager: true,
+                nav: false,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+
+        });
+    </script>
+    <!-- //testimonials  Responsiveslides -->
+
+    <!-- sticky nav bar-->
+    <script>
+        $(() => {
+
+            //On Scroll Functionality
+            $(window).scroll(() => {
+                var windowTop = $(window).scrollTop();
+                windowTop > 100 ? $('nav').addClass('navShadow') : $('nav').removeClass('navShadow');
+                windowTop > 100 ? $('ul.nav-agile').css('top', '50px') : $('ul.nav-agile').css('top', '160px');
+            });
+
+            //Click Logo To Scroll To Top
+            $('#logo').on('click', () => {
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            /*
+             //Smooth Scrolling Using Navigation Menu
+             $('a[href*="#"]').on('click', function (e) {
+               $('html,body').animate({
+                 scrollTop: $($(this).attr('href')).offset().top - 100
+               }, 500);
+               e.preventDefault();
+             });
+            */
+
+            //Toggle Menu
+            $('#menu-toggle').on('click', () => {
+                $('#menu-toggle').toggleClass('closeMenu');
+                $('ul').toggleClass('showMenu');
+
+                $('li').on('click', () => {
+                    $('ul').removeClass('showMenu');
+                    $('#menu-toggle').removeClass('closeMenu');
+                });
+            });
+
+        });
+    </script>
+    <!-- //sticky nav bar -->
+
+    <script src="/boot/js/smoothscroll.js"></script><!-- Smooth scrolling -->
+
+    <!-- start-smoth-scrolling -->
+    <script src="/boot/js/move-top.js"></script>
+    <script src="/boot/js/easing.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 900);
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            /*
+            var defaults = {
+                  containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+             };
+            */
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <!-- //end-smoth-scrolling -->
+
+    <!-- 下拉菜单 -->
+
+    <script src="/boot1/js/bootstrap.min.js"></script>
+    <!--//下拉菜单-->
+
+    <!-- 公司推荐 -->
+    <script src="/boot4/js/lib/jquery.js"></script>
+    <script src="/boot4/js/lib/bootstrap.min.js"></script>
+    <script src="/boot4/js/lib/lightbox.min.js"></script>
+    <script src="/boot4/js/lib/shuffle.js"></script>
+    <script src="/boot4/js/lib/swiper.min.js"></script>
+    <script src="/boot4/js/lib/waypoints.min.js"></script>
+    <script src="/boot4/js/script.js"></script>
+    <!-- //公司推荐 -->
+
+</body>
+</html>

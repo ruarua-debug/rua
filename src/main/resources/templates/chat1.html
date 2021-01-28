@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:margin-right="http://www.w3.org/1999/xhtml" xmlns:padding="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Chat</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+    <!-- animation css files -->
+    <link rel="stylesheet" href="/Bootstrap1/css/animation-aos.css">
+    <link href='/Bootstrap1/css/aos.css' rel='stylesheet prefetch' type="text/css" media="all" />
+    <!-- //animation css files -->
+
+    <!-- css files -->
+    <link href="/Bootstrap1/css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+    <link href="/Bootstrap1/css/style1.css" rel='stylesheet' type='text/css' /><!-- custom css -->
+    <link href="/Bootstrap1/css/fontawesome-all.css" rel="stylesheet"><!-- fontawesome css -->
+    <!-- //css files -->
+
+    <!-- google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <!-- //google fonts -->
+    <!--    chat-->
+    <link rel="stylesheet" href="/BootStrap4/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="/BootStrap4/vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom icon font-->
+    <link rel="stylesheet" href="/BootStrap4/css/fontastic.css">
+    <!-- Google fonts - Open Sans-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <!-- Fancybox-->
+    <link rel="stylesheet" href="/BootStrap4/vendor/@fancyapps/fancybox/jquery.fancybox.min.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="/BootStrap4/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="/BootStrap4/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="favicon.png">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]-->
+    <!--下拉菜单-->
+    <link href="bootstrap8/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <!--//下拉菜单-->
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<body>
+
+<!-- header -->
+<header class="index-banner">
+    <!-- nav -->
+    <nav class="main-header navShadow">
+        <div id="brand" data-aos="zoom-in-up" class="aos-init aos-animate">
+
+            <div id="logo">
+                <a href="index.html">
+                    <i class="fab fa-blackberry"></i>
+                </a>
+            </div>
+            <div id="word-mark">
+                <h1>
+                    <a href="index.html">DATABOX</a>
+                </h1>
+            </div>
+        </div>
+        <div id="menu">
+            <div id="menu-toggle">
+                <div id="menu-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <ul class="text-center text-capitalize nav-agile" data-aos="zoom-in-up" >
+                <li>
+                    <a href="/data/main" class="active">首页</a>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <!--<li>
+                    <a href="#choose" class="scroll">职位</a>
+                </li>-->
+
+                <!--下拉菜单-->
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> 报表 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a target="_blank"  href="/data/position1" style="color: #4e4f50">数据挖掘</a></li>
+                            <li><a target="_blank"  href="/data/position2"  style="color:#4e4f50">人事经理</a></li>
+                            <li><a target="_blank"  href="/data/position3" style="color:#4e4f50">C++游戏开发 </a></li>
+                            <li><a target="_blank"  href="/data/position4"  style="color:#4e4f50">web前端开发师 </a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 -->
+                <li>
+                    <a href="#" class="active"></a>
+                </li>
+
+                <li>
+                    <a th:href="@{'position/0'}" class="scroll">职位</a>
+                </li>
+                <li>
+                    <a href="#" class="active"></a>
+                </li>
+
+                <li>
+                    <a href="/data/chat1" class="scroll">讨论</a>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+
+                <li class="dropdown"><a href="#"  th:text="${session.UserInfo.UserName}" class="dropdown-toggle" data-toggle="dropdown"> 用户 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a href="/user/shoppingcar"   style="color:#4e4f50">个人中心</a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 ---->
+                <li>
+                    <a href="#" class="active"></a>
+                </li>
+
+
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> 登录 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a href="/user/login2" style="color: #4e4f50">企业用户</a></li>
+                            <li><a href="/data/admin"  style="color:#4e4f50">管理员</a></li>
+                            <li><a href="/user/login" style="color:#4e4f50">退出登陆 </a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 -->
+                <li>
+                    <a href="#" class="active"></a>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> 注册 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a href="/data/register2" style="color: #4e4f50">企业用户</a></li>
+                            <li><a href="/user/register"  style="color:#4e4f50">普通用户</a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 -->
+
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+            </ul>
+        </div>
+
+    </nav>
+    <!-- //nav -->
+</header>
+<!-- //header -->
+
+<!-- banner bottom -->
+<section class="banner-bottom py-5">
+    <div class="container py-md-3">
+    </div>
+</section>
+
+<!--chat-->
+<div class="container" >
+    <div class="row">
+        <!-- Latest Posts -->
+        <main class="posts-listing col-lg-8">
+            <div class="container" >
+                <div class="row" >
+                    <!-- post -->
+                    <div class="post col-xl-11" th:each="ChatInfo,userStat:${chatuser.list}">
+                        <div class="post-details">
+                            <div class="post-meta d-flex justify-content-between">
+                                <div class="date meta-last"></div>
+                                <div class="category" th:text="${ChatInfo.Topic}"><a href="#">#面试</a></div>
+                            </div><a href="post.html">
+                            <h3 class="h4" th:text="${ChatInfo.Title}">设计岗位面试，面试官想听到什么内容？</h3></a>
+                            <p class="text-muted"th:text="${ChatInfo.Content}">一定要事先了解公司的产品，面试之前，你一定要非常了解那家公司的产品，因为不同的产品考察的点也是不一样的。
+                                了解公司的文化会帮忙加分，公司的文化可以直接的反映到面试风格上来.
+                                比如像是阿里跟华为这种讲究狼性文化的，面试的风格都很飘忽不定，我的感觉是要看面试人的风格。</p>
+                            <footer class="post-footer d-flex align-items-center"><a href="#" class="author d-flex align-items-center flex-wrap">
+                                <div class="avatar"><img src="/BootStrap4/img/avatar-3.jpg" alt="..." class="img-fluid"></div>
+                                <div class="title" th:text="${ChatInfo.UserName}"><span>John Doe</span></div></a>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-template d-flex justify-content-center">
+                        <li class="page-item">
+                            <a th:href="@{/data/chat1(pageIndex=${chatuser.pageNum-1},pageSize=5,UserID=${UserID})}"  aria-label="Next"class="page-link">
+                                <i class="fa fa-angle-left"></i></a>
+                        </li>
+
+                        <th:block th:each="nav:${chatuser.navigatepageNums}">
+                            <li class="page-item" th:class="${nav==chatuser.pageNum}?'active':''">
+                                <a th:href="@{/data/chat1(pageIndex=${nav},pageSize=5,UserID=${UserID})}"
+                                   th:text="${nav}" class="page-link">1</a>
+                            </li>
+                        </th:block>
+
+                        <li class="page-item">
+                            <a th:href="@{/data/chat1(pageIndex=${chatuser.pageNum+1},pageSize=5,UserID=${UserID})}" aria-label="Next" class="page-link">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </main>
+        <aside class="col-lg-4">
+            <!-- Widget [Categories Widget]-->
+            <div class="widget categories">
+                <header>
+                    <h3 class="h6">话题分类</h3>
+                </header>
+                <div class="item d-flex justify-content-between">
+                    <a th:href="@{/data/chat1?id=0}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所有分类</a>
+                </div>
+                <div class="item d-flex justify-content-between">
+                    <a th:href="@{/data/chat1?id=1}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;面试经验</a>
+                </div>
+                <div class="item d-flex justify-content-between">
+                    <a th:href="@{/data/chat1?id=2}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;简历</a>
+                </div>
+                <div class="item d-flex justify-content-between">
+                    <a th:href="@{/data/chat1?id=3}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;薪酬福利</a>
+                </div>
+                <div class="item d-flex justify-content-between">
+                    <a th:href="@{/data/chat1?id=4}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;职业发展规划</a>
+                </div>
+                <div class="item d-flex justify-content-between">
+                    <a th:href="@{/data/chat1?id=5}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;职位选择</a>
+                </div>
+            </div>
+            <!-- Widget [Tags Cloud Widget]-->
+            <div class="widget search">
+                <div class="add-comment">
+                    <header>
+                        <h3 class="h6">发帖</h3>
+                    </header>
+                    <form  action="/data/chat1" method="post" class="commenting-form">
+                        <div class="row">
+                            <div class="form-group col-md-12"  >
+                                <input type="text"  name="Topic" id="Topic" placeholder="#话题" class="form-control">
+                            </div>
+                            <div class="form-group col-md-12"  >
+                                <input type="text"  name="Title" id="Title" placeholder="标题" class="form-control">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <textarea   name="Content" id="Content" placeholder="内容" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <button type="submit" class="btn btn-info">点击提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+</div>
+<!--footer -->
+<footer>
+    <section class="footer footer_w3layouts_section_1its py-5" style="height:300 px;">
+        <div class="container py-md-3">
+            <div class="footer-grid_section text-center" data-aos="zoom-in" padding:5px; style="height: 40px;">
+                <ul class="social_section_1info">
+                    <li class="mb-2 facebook"><a href="#"><i class="fab mr-1 fa-facebook-f"></i>facebook</a></li>
+                    <li class="mb-2 twitter"><a href="#"><i class="fab mr-1 fa-twitter"></i>twitter</a></li>
+                    <li class="google"><a href="#"><i class="fab mr-1 fa-google-plus-g"></i>google</a></li>
+                    <li class="linkedin"><a href="#"><i class="fab mr-1 fa-linkedin-in"></i>linkedin</a></li>
+                </ul>
+            </div>
+
+            <div class="row footer-top mt-md-5 mt-4"style="height: 150px;">
+                <div class="col-lg-4 col-md-6 footer-grid_section_1its_w3" data-aos="fade-right">
+                    <div class="footer-title">
+                        <h3>关 于 我 们</h3>
+                    </div>
+                    <div class="footer-text">
+                        <p>产 品 介 绍 </p>
+                        <p>相 关 新 闻  <a href="mailto:info@example.com">info@example.com</a></p>
+                        <p>联 系 我 们 : +12 534894364</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-4 footer-grid_section_1its_w3" data-aos="fade-up">
+                    <div class="footer-title">
+                        <h3>友 情 链 接</h3>
+                    </div>
+                    <div class="row">
+                        <ul class="col-6 links">
+                            <li><a href="#choose" class="scroll"> </a></li>
+                            <li><a href="#https://www.zhipin.com/?sid=sem_pz_360pc_title" class="scroll">Boss 直 聘 </a></li>
+                            <li><a href="#https://zhaopin.baidu.com/quanzhi" class="scroll">百 度 百 聘</a></li>
+                            <li><a href="#https://wh.58.com/?utm_source=sem-360-pc&spm=14623020152.6642781136&utm_campaign=sell&utm_medium=cpcq" class="scroll">58 同 城 </a></li>
+                            <li><a href="#https://join.qq.com/" class="scroll">腾 讯 校 园 招 聘 </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mt-lg-0 mt-4 col-sm-12 footer-grid_section_1its_w3" data-aos="fade-left">
+                    <div class="footer-title">
+                        <h3>用户中心</h3>
+                    </div>
+                    <ul class="col-6 links">
+                        <li><a href="#">使 用 指 南 </a></li>
+                        <li><a href="#faq" class="scroll">用 户 协 议</a></li>
+                        <li><a href="#">企 业 咨 询</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row">
+            <img src="/erweima.jpg">
+        </div>
+
+    </section>
+
+</footer>
+<!-- //footer -->
+
+<!-- copyright -->
+<div class="cpy-right text-center py-3"style="height: 40px;">
+    <p class="">Copyright &copy; 2019.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+</div>
+<!-- //copyright -->
+
+<!-- Vertically centered Modal -->
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-capitalize text-center" id="exampleModalLongTitle"> <i class="fab fa-blackberry"></i> Landing</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save Changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Vertically centered Modal -->
+
+<!-- video Modal Popup -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Video Overview</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body video">
+                <iframe src=""></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save Changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //video Model Popup -->
+
+<!--/Login-->
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="login px-4 mx-auto mw-100">
+                    <h5 class="text-center mb-4">Login Now</h5>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label class="mb-2">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required="">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label class="mb-2">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="" required="">
+                        </div>
+                        <div class="form-check mb-2">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit mt-2">Sign In</button>
+                        <p class="text-center pb-4">
+                            <a href="#" data-toggle="modal2" data-target="#exampleModalCenter"> Don't have an account?</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- js -->
+<script src="/Bootstrap1/js/jquery-2.2.3.min.js"></script>
+<script src="/Bootstrap1/js/bootstrap.js"></script>
+<!-- //js -->
+
+<!-- animation js -->
+<script src='/Bootstrap1/js/aos.js'></script>
+<script>
+    AOS.init({
+        easing: 'ease-out-back',
+        duration: 1000
+    });
+
+</script>
+<!-- //animation js -->
+
+<!-- testimonials  Responsiveslides -->
+<script src="/Bootstrap1/js/responsiveslides.min.js"></script>
+<script>
+    // You can also use"$(window).load(function() {"
+    $(function () {
+        // Slideshow 4
+        $("#slider3").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: false,
+            speed: 500,
+            namespace: "callbacks",
+            before: function () {
+                $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+                $('.events').append("<li>after event fired.</li>");
+            }
+        });
+
+    });
+</script>
+<!-- //testimonials  Responsiveslides -->
+
+<!-- sticky nav bar-->
+<script>
+    $(() => {
+
+        //On Scroll Functionality
+        $(window).scroll(() => {
+            var windowTop = $(window).scrollTop();
+    windowTop > 100 ? $('nav').addClass('navShadow') : $('nav').removeClass('navShadow');
+    windowTop > 100 ? $('ul.nav-agile').css('top', '50px') : $('ul.nav-agile').css('top', '160px');
+    });
+
+    //Click Logo To Scroll To Top
+    $('#logo').on('click', () => {
+        $('html,body').animate({
+        scrollTop: 0
+    }, 500);
+    });
+
+    /*
+     //Smooth Scrolling Using Navigation Menu
+     $('a[href*="#"]').on('click', function (e) {
+       $('html,body').animate({
+         scrollTop: $($(this).attr('href')).offset().top - 100
+       }, 500);
+       e.preventDefault();
+     });
+    */
+
+    //Toggle Menu
+    $('#menu-toggle').on('click', () => {
+        $('#menu-toggle').toggleClass('closeMenu');
+    $('ul').toggleClass('showMenu');
+
+    $('li').on('click', () => {
+        $('ul').removeClass('showMenu');
+    $('#menu-toggle').removeClass('closeMenu');
+    });
+    });
+
+    });
+</script>
+<!-- //sticky nav bar -->
+
+<script src="/Bootstrap1/js/smoothscroll.js"></script><!-- Smooth scrolling -->
+
+<!-- start-smoth-scrolling -->
+<script src="/Bootstrap1/js/move-top.js"></script>
+<script src="/Bootstrap1/js/easing.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({
+                scrollTop: $(this.hash).offset().top
+            }, 900);
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        /*
+        var defaults = {
+              containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+         };
+        */
+
+        $().UItoTop({
+            easingType: 'easeOutQuart'
+        });
+
+    });
+</script>
+<!-- //end-smoth-scrolling -->
+<script src="/BootStrap4/vendor/jquery/jquery.min.js"></script>
+<script src="/BootStrap4/vendor/popper.js/umd/popper.min.js"> </script>
+<script src="/BootStrap4/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/BootStrap4/vendor/jquery.cookie/jquery.cookie.js"> </script>
+<script src="/BootStrap4/vendor/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+<script src="/BootStrap4/js/front.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/boot/css/bootstrap.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+<div class="panel-body">
+    <P class="bg-success"><br>&nbsp;用户信息管理系统，你可以对用户信息进行删除/修改！&nbsp;或&nbsp;
+        <a href="/data/adduser" class="btn btn-primary">添加用户信息</a><br><br></P>
+</div>
+<!--      <div th:text="${abc}">456</div>&lt;!&ndash;"语法：都要加上th:  ;覆盖;$;{}"&ndash;&gt;-->
+<!--      <p th:text="${aaa}">122</p>-->
+<!--      hello keep!-->
+<!--      传对象到前端页面的方式</br>-->
+<!--      姓名：<div th:text="${xm.stu_name}"></div></br>-->
+<!--      电话：<div th:text="${xm.stu_phone}"></div></br>-->
+<!--      地址：<div th:text="${xm.str_address}"></div></br>-->
+<!--      爱好：<div th:text="${xm.stu_interest}"></div></br>-->
+<!--      密码：<div th:text="${xm.password}"></div></br>-->
+<table class="table table-hover">
+    <tr>
+        <th>账号</th>
+        <th>用户名</th>
+        <th>密码</th>
+        <th>电话</th>
+        <th>头像</th>
+        <th>操作</th>
+    </tr>
+    <tr th:each="DataInfo,userData:${data}">
+        <td th:text="${userData.index+1}"> abc </td>
+        <td th:text="${DataInfo.getUserID()}"> abc </td>
+        <td th:text="${DataInfo.getUserName()}"> abc </td>
+        <td th:text="${DataInfo.getPassword()}"> </td>
+        <td th:text="${DataInfo.getUserPhone()}"> </td>
+        <td>
+            <img th:src="'http://localhost:8080/images/'+${DataInfo.User_image_url}" width="80px" height="80px"/>
+        </td>
+        <td>
+            <a th:href="@{'addData/'+${DataInfo.UserID}}" title="删除">增加<i class="fa fa-edit table-hover"></i></a>
+            <a th:href="@{'delData/'+${DataInfo.UserID}}" title="删除">删除<i class="fa fa-edit table-hover"></i></a>
+            <a th:href="@{'upData/'+${DataInfo.UserID}}" title="修改">修改<i class="fa fa-edit table-hover"></i></a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

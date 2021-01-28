@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+    <!-- animation css files -->
+    <link rel="stylesheet" href="/boot/css/animation-aos.css">
+    <link href='/static/boot/css/aos.css' rel='stylesheet prefetch' type="text/css" media="all" />
+    <!-- //animation css files -->
+
+    <!-- css files -->
+    <link href="/boot/css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+    <link href="/boot/css/style1.css" rel='stylesheet' type='text/css' /><!-- custom css -->
+    <link href="/boot/css/fontawesome-all.css" rel="stylesheet"><!-- fontawesome css -->
+    <!-- //css files -->
+    <!-- google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <!-- //下拉菜单 -->
+    <!-- 浮窗 boot1 -->
+    <link href="/boot1/css/bootstrap.css" rel="stylesheet">
+    <link href="/boot1/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Extra Styles, not needed for Mega Menu or Boostrap -->
+    <link href="/boot1/css/style.css" rel="stylesheet">
+
+    <!-- Mega Menu Style, you kinda really need Bootstrap in order for this to work -->
+    <link href="/boot1/css/mega-menu.css" rel="stylesheet">
+
+    <!-- Le Google font -->
+    <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <!--//浮窗-->
+    <!--个人中心-->
+
+    <link href="http://www.lagou.com/images/favicon.ico" rel="Shortcut Icon">
+    <link href="/bootp/css/style.css" type="text/css" rel="stylesheet">
+    <link href="/bootp/css/external.min.css" type="text/css" rel="stylesheet">
+    <link href="/bootp/css/popup.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="style/js/jquery.1.10.1.min.js"></script>
+
+    <!--个人中心-->
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <!-- //css files -->
+</head>
+<body>
+
+<header class="index-banner">
+    <!-- nav -->
+    <nav class="main-header navShadow">
+        <div id="brand" data-aos="zoom-in-up" class="aos-init aos-animate">
+
+            <div id="logo">
+                <a href="index.html">
+                    <i class="fab fa-blackberry"></i>
+                </a>
+            </div>
+            <div id="word-mark">
+                <h1>
+                    <a href="index.html">DATABOX</a>
+                </h1>
+            </div>
+        </div>
+        <div id="menu">
+            <div id="menu-toggle">
+                <div id="menu-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <ul class="text-center text-capitalize nav-agile" data-aos="zoom-in-up" >
+                <li>
+                    <a href="" class="active">首页</a>
+                </li>
+
+                <li>
+                    <a href="#" class="active"></a>
+                </li>
+                <li>
+                    <a href="/data/post" class="active">发布</a>
+                </li>
+
+                <li>
+                    <a href="#" class="active"></a>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <!--公司名字-->
+                <li class="dropdown">
+                    <a href="#" th:text="${session.user.Company}"  class="dropdown-toggle" data-toggle="dropdown"> 华为 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a href="/data/personal1">个人中心</a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 -->
+                <!--公司名字-->
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> 登录 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li class="nav-title"></li>
+                            <li><a href="/user/login">普通用户</a></li>
+                            <li><a href="/data/admin">管理员</a></li>
+                            <li><a href="/data/login2">退出登录</a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 -->
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> 注册 </a>
+                    <section class="dropdown-menu mega-menu-2 transition">
+                        <ul class="add-bottom-space">
+                            <li><a href="/user/login">普通用户</a></li>
+                            <li><a href="#">企业用户</a></li>
+                            <li><a href="/user/admin">管理员</a></li>
+                        </ul>
+                    </section>
+                </li><!-- 下拉菜单 -->
+
+                <li>
+                    <a href="index.html" class="active"></a>
+                </li>
+
+
+
+            </ul>
+        </div>
+
+    </nav>
+    <!-- //nav -->
+</header>
+<!--//header-->
+
+
+<!-- 内容 -->
+<section class="faq-w3l py-5" id="faq">
+    <div class="container py-lg-3">
+        <div class="row faq-info">
+            <div class=" col-md-6 faq-w3agile">
+                <!-- 此处写内容 -->
+                <!-- 此处写内容 -->
+                <!-- 此处写内容 -->
+                <!-- 此处写内容 -->
+                <!-- 此处写内容 -->
+
+                <div class="breadcromb-box">
+                    <h3> </h3>
+                </div>
+
+                <!-- 此处写内容 -->
+                <!-- 此处写内容 -->
+                <!-- 此处写内容 -->
+            </div>
+            <div class=" col-md-6 faq-w3agile">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //内容 -->
+
+<div id="container">
+    <div class="sidebar">
+        <a class="btn_create" href="/data/post">发布新职位</a>
+        <dl class="company_center_aside">
+            <dt>我发布的职位</dt>
+            <dd class="current">
+                <a href="/data/personal1">已通过职位</a>
+            </dd>
+            <dd >
+                <a href="/data/personal">待通过职位</a>
+            </dd>
+        </dl>
+    </div><!-- end .sidebar -->
+    <div class="content">
+        <dl class="company_center_content">
+            <dt>
+                <h1>
+                    <em></em>
+                    已发布职位  <span></span>                        </h1>
+            </dt>
+            <dd>
+                <form action="canInterviewResumes.html" method="get" id="filterForm">
+
+                    <div class="filter_options  dn " style="display: none;">
+
+
+
+
+                    </div><!-- end .filter_options -->
+                    <!--                    表格-->
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>编号</th>
+                            <th>公司</th>
+                            <th>职位</th>
+                            <th>工资</th>
+                            <th>学历</th>
+                            <th>经验</th>
+                            <th>城市</th>
+                            <th>职位描述</th>
+                            <td>状态</td>
+                        </tr>
+                        </thead>
+                        <!--                        表体-->
+                        <tbody>
+                        <tr th:each="CompanyInfo,userStat:${posi.list}">
+                            <td th:text="${userStat.index+1}"></td>
+                            <td th:text="${CompanyInfo.Company}"></td>
+                            <td th:text="${CompanyInfo.Position}"></td>
+                            <td th:text="${CompanyInfo.Salary}"></td>
+                            <td th:text="${CompanyInfo.Education}"> </td>
+                            <td th:text="${CompanyInfo.Experience}"> </td>
+                            <td th:text="${CompanyInfo.City}" > </td>
+                            <td th:text="${CompanyInfo.Description}"> </td>
+                            <td th:text="${CompanyInfo.c_status}==true?'已通过':'未通过'"></td>
+                        </tr>
+                        </tbody>
+                        <!--											表体-->
+                    </table>
+                    <!--                    表格-->
+
+                </form>
+            </dd>
+        </dl><!-- end .company_center_content -->
+        <!--										分页-->
+        <nav aria-label="Page navigation" style="float: right;">
+            <ul class="pagination">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <th:block th:each="nav : ${posi.navigatepageNums}">
+                    <li th:class="${nav==posi.pageNum}?'active':''"  class="page-item active">
+                        <a class="page-link" th:href="@{'/data/personal1?pageIndex='+${nav}}"
+                           th:text="${nav}"></a>
+                    </li>
+                </th:block>
+
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!--										分页-->
+
+    </div><!-- end .content -->
+
+
+
+    <div class="clear"></div>
+    <input type="hidden" value="b4bc225f0d084ee5b8d045f9c98a49ff" id="resubmitToken">
+    <a rel="nofollow" title="回到顶部" id="backtop"></a>
+</div><!-- end #container -->
+
+
+
+
+
+
+
+
+<!--footer -->
+<footer>
+    <section class="footer footer_w3layouts_section_1its py-5" style="height:300 px;">
+        <div class="container py-md-3">
+            <div class="footer-grid_section text-center" data-aos="zoom-in" padding:5px; style="height: 40x;">
+                <ul class="social_section_1info">
+                    <li class="mb-2 facebook"><a href="#"><i class="fab mr-1 fa-facebook-f"></i>facebook</a></li>
+                    <li class="mb-2 twitter"><a href="#"><i class="fab mr-1 fa-twitter"></i>twitter</a></li>
+                    <li class="google"><a href="#"><i class="fab mr-1 fa-google-plus-g"></i>google</a></li>
+                    <li class="linkedin"><a href="#"><i class="fab mr-1 fa-linkedin-in"></i>linkedin</a></li>
+                </ul>
+            </div>
+
+            <div class="row footer-top mt-md-5 mt-4"style="height: 150px;">
+                <div class="col-lg-4 col-md-6 footer-grid_section_1its_w3" data-aos="fade-right">
+                    <div class="footer-title">
+                        <h3>关 于 我 们</h3>
+                    </div>
+                    <div class="footer-text">
+                        <p>产 品 介 绍 </p>
+                        <p>相 关 新 闻  <a href="mailto:info@example.com">info@example.com</a></p>
+                        <p>联 系 我 们 : +12 534894364</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-4 footer-grid_section_1its_w3" data-aos="fade-up">
+                    <div class="footer-title">
+                        <h3>友 情 链 接</h3>
+                    </div>
+                    <div class="row">
+                        <ul class="col-6 links">
+                            <li><a href="#choose" class="scroll"> </a></li>
+                            <li><a href="#https://www.zhipin.com/?sid=sem_pz_360pc_title" class="scroll">Boss 直 聘 </a></li>
+                            <li><a href="#https://zhaopin.baidu.com/quanzhi" class="scroll">百 度 百 聘</a></li>
+                            <li><a href="#https://wh.58.com/?utm_source=sem-360-pc&spm=14623020152.6642781136&utm_campaign=sell&utm_medium=cpcq" class="scroll">58 同 城 </a></li>
+                            <li><a href="#https://join.qq.com/" class="scroll">腾 讯 校 园 招 聘 </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mt-lg-0 mt-4 col-sm-12 footer-grid_section_1its_w3" data-aos="fade-left">
+                    <div class="footer-title">
+                        <h3>用户中心</h3>
+                    </div>
+                    <ul class="col-6 links">
+                        <li><a href="#">使 用 指 南 </a></li>
+                        <li><a href="#faq" class="scroll">用 户 协 议</a></li>
+                        <li><a href="#">企 业 咨 询</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row">
+            <img src="/erweima.jpg">
+        </div>
+
+    </section>
+
+</footer>
+<!-- //footer -->
+
+<!-- copyright -->
+<div class="cpy-right text-center py-3"style="height: 40px;">
+    <p class="">Copyright &copy; 2019.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+</div>
+<!-- //copyright -->
+
+<!-- Vertically centered Modal -->
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-capitalize text-center" id="exampleModalLongTitle"> <i class="fab fa-blackberry"></i> Landing</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save Changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Vertically centered Modal -->
+
+<!-- video Modal Popup -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Video Overview</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body video">
+                <iframe src=""></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save Changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //video Model Popup -->
+
+<!--/Login-->
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="login px-4 mx-auto mw-100">
+                    <h5 class="text-center mb-4">Login Now</h5>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label class="mb-2">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required="">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label class="mb-2">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="" required="">
+                        </div>
+                        <div class="form-check mb-2">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit mt-2">Sign In</button>
+                        <p class="text-center pb-4">
+                            <a href="#" data-toggle="modal2" data-target="#exampleModalCenter"> Don't have an account?</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--//Login-->
+
+<!-- js -->
+<script src="/boot/js/jquery-2.2.3.min.js"></script>
+<script src="/boot/js/bootstrap.js"></script>
+<!-- //js -->
+
+<!-- animation js -->
+<script src='/boot/js/aos.js'></script>
+<script>
+    AOS.init({
+        easing: 'ease-out-back',
+        duration: 1000
+    });
+
+</script>
+<!-- //animation js -->
+
+<!-- testimonials  Responsiveslides -->
+<script src="/boot/js/responsiveslides.min.js"></script>
+<script>
+    // You can also use"$(window).load(function() {"
+    $(function () {
+        // Slideshow 4
+        $("#slider3").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: false,
+            speed: 500,
+            namespace: "callbacks",
+            before: function () {
+                $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+                $('.events').append("<li>after event fired.</li>");
+            }
+        });
+
+    });
+</script>
+<!-- //testimonials  Responsiveslides -->
+
+<!-- sticky nav bar-->
+<script>
+    $(() => {
+
+        //On Scroll Functionality
+        $(window).scroll(() => {
+            var windowTop = $(window).scrollTop();
+            windowTop > 100 ? $('nav').addClass('navShadow') : $('nav').removeClass('navShadow');
+            windowTop > 100 ? $('ul.nav-agile').css('top', '50px') : $('ul.nav-agile').css('top', '160px');
+        });
+
+        //Click Logo To Scroll To Top
+        $('#logo').on('click', () => {
+            $('html,body').animate({
+                scrollTop: 0
+            }, 500);
+        });
+
+        /*
+         //Smooth Scrolling Using Navigation Menu
+         $('a[href*="#"]').on('click', function (e) {
+           $('html,body').animate({
+             scrollTop: $($(this).attr('href')).offset().top - 100
+           }, 500);
+           e.preventDefault();
+         });
+        */
+
+        //Toggle Menu
+        $('#menu-toggle').on('click', () => {
+            $('#menu-toggle').toggleClass('closeMenu');
+            $('ul').toggleClass('showMenu');
+
+            $('li').on('click', () => {
+                $('ul').removeClass('showMenu');
+                $('#menu-toggle').removeClass('closeMenu');
+            });
+        });
+
+    });
+</script>
+<!-- //sticky nav bar -->
+
+<script src="/boot/js/smoothscroll.js"></script><!-- Smooth scrolling -->
+
+<!-- start-smoth-scrolling -->
+<script src="/boot/js/move-top.js"></script>
+<script src="/boot/js/easing.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({
+                scrollTop: $(this.hash).offset().top
+            }, 900);
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        /*
+        var defaults = {
+              containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+         };
+        */
+
+        $().UItoTop({
+            easingType: 'easeOutQuart'
+        });
+
+    });
+</script>
+<!-- //end-smoth-scrolling -->
+
+<!-- 下拉菜单 -->
+
+<script src="/boot1/js/bootstrap.min.js"></script>
+<!--//下拉菜单-->
+<!--表格-->
+<script src="/bootp/js/jquery.lib.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/bootp/js/ajaxfileupload.js"></script>
+<script src="/bootp/js/additional-methods.js" type="text/javascript"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="/bootp/js/excanvas.js"></script>
+<![endif]-->
+<script type="text/javascript">
+    var youdao_conv_id = 271546;
+</script>
+<script src="/bootp/js/conv.js" type="text/javascript"></script>
+<script src="/bootp/js/ajaxCross.json" charset="UTF-8"></script>
+<script type="text/javascript">
+    var ctx = "http://www.lagou.com";
+    console.log(1);
+</script>
+<!--个人中心-->
+<script src="/bootp/js/core.min.js" type="text/javascript"></script>
+<script src="/bootp/js/popup.min.js" type="text/javascript"></script>
+
+<!--分页-->
+<script src="/bootstrap/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+<script src="/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
